@@ -1,8 +1,9 @@
-from django.utils import timezone
-from django.views.generic.base import TemplateView
+from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from app.models import Town
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.urls import reverse_lazy
+from .models import *
 
 # Create your views here.
 
@@ -15,45 +16,28 @@ class HomeView(TemplateView):
     return context
 
 
-class TownDetailView(DetailView):
-  
+
+
+
+#=================================================================
+class TownDetailView(DetailView): 
   model = Town
-
-  def get_context_data(self, **kwargs):
-    context =  super().get_context_data(**kwargs)
-    context['towns'] = Town.objects.all()
-    return context
+  fields =['name', 'branch']
 
 
-class TownListView(ListView):
-  
+
+class TownCreateView(CreateView):
   model = Town
-  paginate_by = 15
-
-  def get_context_data(self, **kwargs):
-    context =  super().get_context_data(**kwargs)
-    return context
+  fields =['name', 'branch']
 
 
 
+class TownUpdateView(UpdateView):
+  model = Town
+  fields =['name', 'branch']
 
 
-#=====================================================================
-#Agregar un form
-from . models import *
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
 
-def add_town(request):
-  submitted = False
-  if request.method == 'POST':
-    form = TownForm(request.POST)
-    if form.is_valid():
-      form.save()
-      return HttpResponseRedirect('/add_town?submitted=True')
-  else:
-    form = TownForm
-    if 'submitted' in request.GET:
-      submitted = True
-  
-  return render(request, 'app/add_town.html', {'form':form, 'submitted':submitted})
+class TownDeleteView(DeleteView):
+  model = Town
+  success_url = reverse_lazy('home')

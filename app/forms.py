@@ -18,3 +18,9 @@ class TownForm(ModelForm):
       'name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Enter the Town Name'}),
       'branch': forms.Select(attrs={'class':'form-control', 'placeholder':'Enter the Town Name'})
     }
+
+
+class RecruiterForm(ModelForm):
+  class Meta:
+    model = Recruiter
+    fields = "__all__"
