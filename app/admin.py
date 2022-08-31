@@ -10,26 +10,25 @@ class MakeAdmin(admin.ModelAdmin):
 
 
 @admin.register(Town)
-class MakeAdmin(admin.ModelAdmin):
+class TownAdmin(admin.ModelAdmin):
   list_display = ('name', 'branch')
 
 
 @admin.register(Recruiter)
-class MakeAdmin(admin.ModelAdmin):
+class RecruiterAdmin(admin.ModelAdmin):
   list_display = ('name', 'email', 'branch')
+  ordering = ('name',)
+  search_fields = ['name']
+
 
 @admin.register(Requirement)
-class MakeAdmin(admin.ModelAdmin):
-  pass
-
-
-@admin.register(Job)
-class MakeAdmin(admin.ModelAdmin):
-  list_display = ('job_id', 'title', 'town')
-
-
 class RequirementAdmin(admin.ModelAdmin):
   formfield_overrides = {
         models.ManyToManyField: {'widget': CheckboxSelectMultiple},
     }
-  pass
+
+
+@admin.register(Job)
+class Jobdmin(admin.ModelAdmin):
+  list_display = ('job_id', 'title', 'town')
+
