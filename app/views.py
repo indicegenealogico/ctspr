@@ -40,7 +40,7 @@ class TownListView(ListView):
 
 #=====================================================================
 #Agregar un form
-from . forms import *
+from . models import *
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 

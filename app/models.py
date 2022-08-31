@@ -74,9 +74,6 @@ class Job(models.Model):
   town        = models.ForeignKey(Town, on_delete=models.CASCADE)
   recruiter   = models.ForeignKey(Recruiter, on_delete=models.CASCADE)
 
-
   def __str__(self):
     return (self.title, self.town)
-
-
   
