@@ -35,7 +35,7 @@ class Branch(models.Model):
 
 #=================================================================================
 class Town(models.Model):
-  name   = models.CharField('Pueblo', max_length=20, null=False, blank=False)
+  name   = models.CharField('Pueblo', max_length=20, null=False, blank=False, unique=True)
   branch = models.ForeignKey(Branch, on_delete=models.DO_NOTHING)
 
   class Meta:
@@ -47,7 +47,7 @@ class Town(models.Model):
 
 #=================================================================================
 class Recruiter(models.Model):
-  name   = models.CharField(max_length=30, blank=False, null=False)
+  name   = models.CharField(max_length=30, blank=False, null=False, unique=True)
   email  = models.EmailField()
   branch = models.ForeignKey(Branch, on_delete=models.DO_NOTHING)
 
@@ -59,7 +59,7 @@ class Recruiter(models.Model):
 
 #=================================================================================
 class Requirement(models.Model):
-  description = models.CharField(max_length=30, blank=False)
+  description = models.CharField(max_length=30, blank=False, unique=True)
 
   def __str__(self):
     return (self.description)

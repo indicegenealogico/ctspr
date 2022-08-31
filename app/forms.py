@@ -24,3 +24,4 @@ class RecruiterForm(ModelForm):
   class Meta:
     model = Recruiter
     fields = "__all__"
+    

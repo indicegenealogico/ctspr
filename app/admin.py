@@ -23,12 +23,14 @@ class RecruiterAdmin(admin.ModelAdmin):
 
 @admin.register(Requirement)
 class RequirementAdmin(admin.ModelAdmin):
-  formfield_overrides = {
-        models.ManyToManyField: {'widget': CheckboxSelectMultiple},
-    }
+  ordering = ('description',)
+
 
 
 @admin.register(Job)
-class Jobdmin(admin.ModelAdmin):
+class JobAdmin(admin.ModelAdmin):
   list_display = ('job_id', 'title', 'town')
+  formfield_overrides = {
+    models.ManyToManyField: {'widget': CheckboxSelectMultiple},
+  }
 
