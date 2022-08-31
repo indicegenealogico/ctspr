@@ -35,16 +35,25 @@ class TownListView(ListView):
     return context
 
 
-from app.forms import *
-from django.views.generic.edit import FormView
 
-class BranchFormView(FormView):
-    template_name = 'branch.html'
-    form_class = BranchForm
-    success_url = '/thanks/'
 
-    def form_valid(self, form):
-        # This method is called when valid form data has been POSTed.
-        # It should return an HttpResponse.
-        form.send_email()
-        return super().form_valid(form)
+
+#=====================================================================
+#Agregar un form
+from . forms import *
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
+
+def add_town(request):
+  submitted = False
+  if request.method == 'POST':
+    form = TownForm(request.POST)
+    if form.is_valid():
+      form.save()
+      return HttpResponseRedirect('/add_town?submitted=True')
+  else:
+    form = TownForm
+    if 'submitted' in request.GET:
+      submitted = True
+  
+  return render(request, 'app/add_town.html', {'form':form, 'submitted':submitted})

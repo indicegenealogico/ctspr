@@ -1,26 +1,21 @@
-from socket import fromshare
+from tkinter import Widget
 from django import forms
+from django.forms import ModelForm
+from . models import *
 
 
+class TownForm(ModelForm):
+  class Meta:
+    model = Town
+    # fields = "__all__"
+    fields = ('name', 'branch')
 
-BRANCHES = (
-  ('BA', 'Barceloneta'),
-  ('LP', 'Las Piedras'),
-  ('SA', 'Santurce'),
-  ('SG', 'San Germán'),
-  ('SL', 'Salinas')
-)
-class BranchForm(forms.Form):
-  name     = forms.CharField()
-  address1 = forms.CharField()
-  address2 = forms.CharField()
-  city     = forms.CharField()
-  state    = forms.CharField()
-  zip_code = forms.CharField()
-  phone    = forms.CharField()
-  fax      = forms.CharField()
-  manager  = forms.CharField()
+    labels = {
+      'name': '',
+      'branch': ''
+    }
 
-  def send_email(self):
-        # send email using the self.cleaned_data dictionary
-        pass
+    widgets = {
+      'name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Enter the Town Name'}),
+      'branch': forms.Select(attrs={'class':'form-control', 'placeholder':'Enter the Town Name'})
+    }
