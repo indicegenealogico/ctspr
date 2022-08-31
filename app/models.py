@@ -1,7 +1,13 @@
 from django.db import models
 from phone_field import PhoneField
+from datetime import datetime
+import datetime
+from django.core.exceptions import ValidationError
 
-
+def no_pass(value):
+  today = date.today()
+  if value < today:
+    raise ValidationError('No passed date allowed')
 
 # Create your models here.
 
@@ -67,12 +73,21 @@ class Requirement(models.Model):
 
 #=================================================================================
 class Job(models.Model):
-  job_id      = models.IntegerField(primary_key = True)
-  title       = models.CharField(max_length=30, null=False, blank=False)
-  description = models.TextField(null=True, blank=True)
-  requiremets = models.ManyToManyField(Requirement)
-  town        = models.ForeignKey(Town, on_delete=models.CASCADE)
-  recruiter   = models.ForeignKey(Recruiter, on_delete=models.CASCADE)
+  job_id       = models.IntegerField(primary_key = True)
+  title        = models.CharField(max_length=30, null=False, blank=False)
+  description  = models.TextField(null=True, blank=True)
+  requiremets  = models.ManyToManyField(Requirement)
+  posting_date = models.DateField(help_text="Enter posting date", validators=[no_pass], 
+                                  blank=True,  null=True, 
+                                  default=datetime.date.today)
+  closing_date = models.DateField(help_text="Enter the closing date", validators=[no_pass], 
+                                  blank=True, null=True)
+  town         = models.ForeignKey(Town, on_delete=models.CASCADE)
+  recruiter    = models.ForeignKey(Recruiter, on_delete=models.DO_NOTHING)
+  created_date = models.DateTimeField(default=datetime.date.today, blank=True)
+  
+  
+  
 
   def __str__(self):
     return ("%s - %s" % (self.job_id, self.title))

@@ -29,8 +29,9 @@ class RequirementAdmin(admin.ModelAdmin):
 
 @admin.register(Job)
 class JobAdmin(admin.ModelAdmin):
-  list_display = ('job_id', 'title', 'town')
+  list_display        = ('job_id', 'title', 'town')
   formfield_overrides = {
     models.ManyToManyField: {'widget': CheckboxSelectMultiple},
   }
+  exclude             = ('created_date',)
 
