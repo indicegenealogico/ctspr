@@ -10,8 +10,8 @@ class TownForm(ModelForm):
     fields = ('name', 'branch')
 
     labels = {
-      'name': '',
-      'branch': ''
+      # 'name': '',
+      # 'branch': ''
     }
 
     widgets = {
