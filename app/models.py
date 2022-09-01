@@ -77,13 +77,15 @@ class Job(models.Model):
   title        = models.CharField(max_length=30, null=False, blank=False)
   description  = models.TextField(null=True, blank=True)
   requirements = models.ManyToManyField(Requirement)
-  posting_date = models.DateField(help_text="Enter posting date", validators=[no_pass], 
+  posting_date = models.DateField(help_text="Enter posting date", 
+                                  validators=[no_pass], 
                                   blank=True,  null=True, 
                                   default=datetime.date.today)
-  closing_date = models.DateField(help_text="Enter the closing date", validators=[no_pass], 
+  closing_date = models.DateField(help_text="Enter the closing date", 
+                                  validators=[no_pass], 
                                   blank=True, null=True)
   town         = models.ForeignKey(Town, on_delete=models.CASCADE)
-  recruiter    = models.ForeignKey(Recruiter, on_delete=models.DO_NOTHING)
+  recruiter    = models.ForeignKey(Recruiter, on_delete=models.DO_NOTHING, blank=True)
   created_date = models.DateTimeField(default=datetime.date.today, blank=True)
   
   
