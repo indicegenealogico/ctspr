@@ -85,7 +85,7 @@ class Job(models.Model):
                                   validators=[no_pass], 
                                   blank=True, null=True)
   town         = models.ForeignKey(Town, on_delete=models.CASCADE)
-  recruiter    = models.ForeignKey(Recruiter, on_delete=models.DO_NOTHING)
+  recruiter    = models.ForeignKey(Recruiter, on_delete=models.DO_NOTHING, blank=True)
   created_date = models.DateTimeField(default=datetime.date.today, blank=True)
   
   

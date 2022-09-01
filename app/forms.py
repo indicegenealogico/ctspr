@@ -37,7 +37,4 @@ class JobForm(ModelForm):
     fields       = '__all__'
     exclude      = ('created_date',)
 
-    posting_date = forms.DateField(
-      widget=forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker'}),
-      input_formats=('%m/%d/%Y', ))
   

@@ -19,6 +19,7 @@ class HomeView(TemplateView):
 class TownCreateView(CreateView):
   model = Town
   fields =['name', 'branch']
+  success_url = reverse_lazy('home')
 
 
 class TownDetailView(DetailView): 
@@ -40,6 +41,7 @@ class TownDeleteView(DeleteView):
 class JobCreateView(CreateView):
   model = Job
   fields = ['job_id', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
+  success_url = reverse_lazy('home')
   
 
 class JobDetailView(DetailView):
