@@ -1,6 +1,6 @@
 from django.db import models
 from phone_field import PhoneField
-from datetime import datetime
+from datetime import date, datetime
 import datetime
 from django.core.exceptions import ValidationError
 
@@ -76,7 +76,7 @@ class Job(models.Model):
   job_id       = models.IntegerField(primary_key = True)
   title        = models.CharField(max_length=30, null=False, blank=False)
   description  = models.TextField(null=True, blank=True)
-  requiremets  = models.ManyToManyField(Requirement)
+  requirements = models.ManyToManyField(Requirement)
   posting_date = models.DateField(help_text="Enter posting date", validators=[no_pass], 
                                   blank=True,  null=True, 
                                   default=datetime.date.today)

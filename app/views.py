@@ -1,14 +1,13 @@
 from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
-from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from .models import *
 
 # Create your views here.
 
+#=====================================================
 class HomeView(TemplateView):
-  
   template_name = "home.html"
 
   def get_context_data(self, **kwargs):
@@ -16,20 +15,15 @@ class HomeView(TemplateView):
     return context
 
 
-
-
-
-#=================================================================
-class TownDetailView(DetailView): 
-  model = Town
-  fields =['name', 'branch']
-
-
-
+#=====================================================
 class TownCreateView(CreateView):
   model = Town
   fields =['name', 'branch']
 
+
+class TownDetailView(DetailView): 
+  model = Town
+  fields =['name', 'branch']
 
 
 class TownUpdateView(UpdateView):
@@ -37,7 +31,27 @@ class TownUpdateView(UpdateView):
   fields =['name', 'branch']
 
 
-
 class TownDeleteView(DeleteView):
   model = Town
+  success_url = reverse_lazy('home')
+
+
+#=====================================================
+class JobCreateView(CreateView):
+  model = Job
+  fields = ['job_id', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
+  
+
+class JobDetailView(DetailView):
+  model = Job
+  fields = ['job_id', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
+
+  
+class JobUpdateView(UpdateView):
+  model = Job
+  fields = ['job_id', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
+  
+
+class JobDeleteView(DeleteView):
+  model = Job
   success_url = reverse_lazy('home')
