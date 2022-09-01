@@ -32,7 +32,7 @@ class RecruiterForm(ModelForm):
     
 #==============================
 class JobForm(ModelForm):
-  class Metta:
+  class Meta:
     model        = Job
     fields       = '__all__'
     exclude      = ('created_date',)
