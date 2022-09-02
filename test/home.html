@@ -1,891 +1,331 @@
-<!DOCTYPE html>
-<html lang="es" data-livestyle-extension="available" class="">
+<!doctype html>
+<html lang="en">
 
 <head>
-     <link type="image/x-icon" href="img/logo1.png" rel="SHORTCUT ICON">
      <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Caribbean Temporary Services LLC | Empleos / Agencias | Santurce | Puerto Rico (PR)</title>
-     <meta name="keywords" content="Manofactura, agencias de empleos">
-     <meta name="author" content="Caribbean Temporary Services LLC | Empleos / Agencias | Santurce | Puerto Rico (PR)">
-     <meta name="copyright"
-          content="Caribbean Temporary Services LLC | Empleos / Agencias | Santurce | Puerto Rico (PR)">
-     <meta name="description"
-          content="Caribbean Temporary Services, LLC. (CTS), es una empresa local establecida en 1983 con la misión de proveer amplias oportunidades de empleo, mientras proporciona un servicio que maneja las necesidades y contribuye al crecimiento de sus clientes en Puerto Rico. Fue fundada por su Presidenta la Sra. Tere Durand Manzanal, quien con su visión, esfuerzo y determinación y seguida por una sólida estructura gerencial dirigida por sus hijas en las divisiones de Asuntos Corporativos y Finanzas, ha logrado mantener una empresa exitosa durante más de treinta años. La compañía ofrece servicios a una amplia gama de sectores comerciales en Puerto Rico y tiene el privilegio de contar entre sus clientes con las empresas más reconocidas de los sectores industriales, bancarios y comerciales. Además, ofrece servicios a diversas agencias gubernamentales y corporaciones públicas. Actualmente, CTS es la compañía líder entre las agencias de empleo temporero locales e internacionales.">
-
-     <!-- =========Estilos========= -->
-
-     <!-- FrameWorks -->
-     <link href="css/bootstrap.css" rel="stylesheet">
-     <!--  Bootstrap -->
-     <link href="css/materialize.css" rel="stylesheet">
-     <!--  Materialize -->
-     <!-- FrameWorks -->
-
-     <!--  Estilos Generales -->
-     <link href="css/style.css" rel="stylesheet">
-     <link href="js/pa-gallery/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-
-     <!--  Css de los iconos -->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-     <!-- =========Estilos========= -->
-     <!-- Start WOWSlider.com HEAD section -->
-     <link rel="stylesheet" type="text/css" href="img/slider/engine1/style.css">
-     <script type="text/javascript" src="img/slider/engine1/jquery.js"></script>
+     <meta name="description" content="">
+     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+     <meta name="generator" content="Hugo 0.101.0">
+     <title>Carousel Template · Bootstrap v5.2</title>
 
 
 
 
-<body data-new-gr-c-s-check-loaded="14.1078.0" data-gr-ext-installed="" cz-shortcut-listen="true" class="loaded">
-     <div class="container-fluid">
-          <!--  Menu -->
-          <header class="">
-               <div class="col-lg-3 col-md-3 col-sm-10 col-xs-10 logo"> <img src="img/logo1.png" class="img-responsive"> </div>
-                    <nav class="col-lg-9 col-md-9 hidden-sm hidden-xs right">
-                         <ul class="ul-menu right ">
-                              <li class="active"><a href="index.html" class="active"><i class="fa fa-home"></i>
-                                        inicio</a> </li>
-                              <li><a href="nosotros.html"><i class="fa fa-book"></i> Sobre nosotros</a></li>
-                              <li><a href="servicios.html"><i class="fa fa-cogs"></i> Servicios</a></li>
-                              <li><a href="covid.html"><img src="img/covid/virus-solid.svg" alt=""> Covid-19</a></li>
-                              <li><a href="empleos.html"><i class="fa fa-info-circle"></i> Solicita Empleo</a></li>
-                              <li><a href="contacto.html"><i class="fa fa-envelope"></i> Contacto</a></li>
+
+
+
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+          crossorigin="anonymous"></script>
+
+     <!-- Favicons -->
+     <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+     <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+     <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+     <meta name="theme-color" content="#712cf9">
+
+
+     <style>
+          .bd-placeholder-img {
+               font-size: 1.125rem;
+               text-anchor: middle;
+               -webkit-user-select: none;
+               -moz-user-select: none;
+               user-select: none;
+          }
+
+          @media (min-width: 768px) {
+               .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+               }
+          }
+
+          .b-example-divider {
+               height: 3rem;
+               background-color: rgba(0, 0, 0, .1);
+               border: solid rgba(0, 0, 0, .15);
+               border-width: 1px 0;
+               box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+          }
+
+          .b-example-vr {
+               flex-shrink: 0;
+               width: 1.5rem;
+               height: 100vh;
+          }
+
+          .bi {
+               vertical-align: -.125em;
+               fill: currentColor;
+          }
+
+          .nav-scroller {
+               position: relative;
+               z-index: 2;
+               height: 2.75rem;
+               overflow-y: hidden;
+          }
+
+          .nav-scroller .nav {
+               display: flex;
+               flex-wrap: nowrap;
+               padding-bottom: 1rem;
+               margin-top: -1px;
+               overflow-x: auto;
+               text-align: center;
+               white-space: nowrap;
+               -webkit-overflow-scrolling: touch;
+          }
+     </style>
+
+
+     <!-- Custom styles for this template -->
+     <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+     <header>
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+               <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Carousel</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                         aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                              <li class="nav-item">
+                                   <a class="nav-link active" aria-current="page" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link" href="#">Link</a>
+                              </li>
+                              <li class="nav-item">
+                                   <a class="nav-link disabled">Disabled</a>
+                              </li>
                          </ul>
-                    </nav>
-               <div class="clearfix"></div>
-     
+                         <form class="d-flex" role="search">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-success" type="submit">Search</button>
+                         </form>
+                    </div>
+               </div>
+          </nav>
+     </header>
 
-               <div id="wowslider-container1" class="bg">
-                    <div class="ws_images">
-                         <div id="force">
-                              <ul>
-                                   <li>
-                                        <a href="empleos.html"><img class="responsive-img" src="img/header1.jpg"
-                                                  title="Sobre 35 años contribuyendo al crecimiento de las empresas en Puerto Rico…"
-                                                  id="wows1_0" /></a>
-                                   </li>
-                                   <li>
-                                        <a href="empleos.html"><img class="responsive-img" src="img/header3.jpg"
-                                                  title="Trayectoria estable y sólida en el reclutamiento de empleados temporeros…"
-                                                  id="wows1_2" /></a>
-                                   </li>
-                                   <li>
-                                        <a href="empleos.html"><img class="responsive-img" src="img/header2.jpg"
-                                                  title="Le brindamos a nuestros clientes el personal que se ajuste a sus necesidades"
-                                                  id="wows1_1" /></a>
-                                   </li>
+     <main>
 
-                                   <li>
-                                        <a href="empleos.html">
-                                             <img src="img/slider/data1/images/header4-1.jpg"
-                                                  alt="El líder en empleos temporeros con "
-                                                  title="El líder en empleos temporeros con más de 30 años de experiencia ">/>
-                                        </a>
-                                   </li>
-                              </ul>
+          <div id="myCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+               <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                         aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                         aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                         aria-label="Slide 3"></button>
+               </div>
+               <div class="carousel-inner">
+                    <div class="carousel-item active">
+                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <rect width="100%" height="100%" fill="#777" />
+                         </svg>
+
+                         <div class="container">
+                              <div class="carousel-caption text-start">
+                                   <h1>Example headline.</h1>
+                                   <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                   <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                              </div>
                          </div>
                     </div>
-                    <div class="ws_shadow"></div>
+                    <div class="carousel-item">
+                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <rect width="100%" height="100%" fill="#777" />
+                         </svg>
 
-               </div>
-          </header>
-
-
-          <!--  Contenidos -->
-          <section id="nosotros" class="white-text">
-               <div class="container">
-                    <div class="row">
-                         <div class="col-lg-4 col-md-4">
-                              <h5 class="title-1">Encuentra tu futuro aquí</h5>
-                              <p>Busca ofertas de empleos disponibles por región en cada una de nuestras cuatro
-                                   sucursales. </p>
+                         <div class="container">
+                              <div class="carousel-caption">
+                                   <h1>Another example headline.</h1>
+                                   <p>Some representative placeholder content for the second slide of the carousel.</p>
+                                   <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                              </div>
                          </div>
-                         <div class="col-lg-8 col-md-8">
-                              <div class="row">
-                                   <!-- Select -->
-                                   <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
-                                        <h5 class="title-1">Ver ofertas de empleo por pueblo</h5>
-                                        <select name="forma"
-                                             onchange="location = this.options[this.selectedIndex].value;">
-                                             <option value="municipio" class="">Seleccione su pueblo</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Adjuntas</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Aguada</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Aguadilla</option>
-                                             <option value="jobs/index.php?q=Santurce"> Aguas Buenas</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Aibonito</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Arecibo</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Arroyo</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Añasco</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Barceloneta</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Barranquitas</option>
-                                             <option value="jobs/index.php?q=Santurce"> Bayamón</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Cabo Rojo</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Caguas</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Camuy</option>
-                                             <option value="jobs/index.php?q=Santurce"> Canóvanas </option>
-                                             <option value="jobs/index.php?q=Santurce"> Carolina</option>
-                                             <option value="jobs/index.php?q=Santurce"> Cataño</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Cayey</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Ceiba</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Ciales</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Cidra</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Coamo</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Comerío</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Corozal</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Culebra</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Dorado</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Fajardo</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Florida</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Guánica</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Guayama</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Guayanilla</option>
-                                             <option value="jobs/index.php?q=Santurce"> Guaynabo</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Gurabo</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Guánica</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Hatillo</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Hormigueros</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Humacao</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Isabela</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Jayuya</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Juana Díaz</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Juncos</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Lajas</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Lares</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Las Marías</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Las Piedras</option>
-                                             <option value="jobs/index.php?q=Santurce"> Loíza </option>
-                                             <option value="jobs/index.php?q=Santurce"> Luquillo</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Manatí</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Maricao</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Maunabo</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Mayagüez</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Moca</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Morovis</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Naguabo</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Naranjito</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Orocovis</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Patillas</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Peñuelas</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Ponce</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Quebradillas</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Rincón</option>
-                                             <option value="jobs/index.php?q=Santurce"> Rio Grande</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Sabana Grande</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Salinas</option>
-                                             <option value="jobs/index.php?q=SanGerman"> San Germán</option>
-                                             <option value="jobs/index.php?q=Santurce"> San Juan</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> San Lorenzo</option>
-                                             <option value="jobs/index.php?q=SanGerman"> San Sebastián</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Santa Isabel</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Toa Alta</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Toa Baja</option>
-                                             <option value="jobs/index.php?q=Santurce"> Trujillo Alto</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Utuado</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Vega Alta</option>
-                                             <option value="jobs/index.php?q=Barceloneta"> Vega Baja</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Vieques</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Villalba</option>
-                                             <option value="jobs/index.php?q=LasPiedras"> Yabucoa</option>
-                                             <option value="jobs/index.php?q=SanGerman"> Yauco</option>
-                                        </select>
-                                        <p class="white-text" style="margin-top: 10px;">Antes de pasar a la solicitud de
-                                             empleo, debe anotar el número de referencia de la posición a la cual
-                                             interesa aplicar para que lo anote en el espacio provisto en la solicitud.
-                                        </p>
-                                   </div>
-                                   <!-- Select -->
+                    </div>
+                    <div class="carousel-item">
+                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <rect width="100%" height="100%" fill="#777" />
+                         </svg>
+
+                         <div class="container">
+                              <div class="carousel-caption text-end">
+                                   <h1>One more for good measure.</h1>
+                                   <p>Some representative placeholder content for the third slide of this carousel.</p>
+                                   <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
                               </div>
                          </div>
                     </div>
                </div>
-          </section>
-          <div class="clearfix"></div>
-          <div class="clearfix"></div>
-          <section id="productos" class="bg white-text">
-               <div class="container">
-                    <div class="col-xs-12">
-                         <div class="mml">
-                              <h3 class="pink-text" id="sucursales">Sucursales de CTS</h3>
-                              <ul class="nav nav-tabs ">
-                                   <li role="presentation" class="dropdown" style="max-height:300px;">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                                             aria-haspopup="true" aria-expanded="false"> Seleccione su Sucursal Regional
-                                             de CTS <span class="caret"></span></a>
-                                        <ul class="dropdown-menu principal-tabs has-scroll">
-                                             <li role="presentation" class="">
-                                                  <button href="#home" aria-controls="home" role="tab"
-                                                       data-toggle="tab">Oficinas Corporativas</button>
-                                             </li>
-                                             <li role="presentation" class="">
-                                                  <button href="#san-german" aria-controls="san-german" role="tab"
-                                                       data-toggle="tab">Sucursal de CTS en San Germán</button>
-                                             </li>
-                                             <li role="presentation" class="">
-                                                  <button href="#santurce" aria-controls="santurce" role="tab"
-                                                       data-toggle="tab">Sucursal de CTS en Santurce</button>
-                                             </li>
-                                             <li role="presentation" class="">
-                                                  <button href="#las-piedras" aria-controls="las-piedras" role="tab"
-                                                       data-toggle="tab">Sucursal de CTS en Las Piedras</button>
-                                             </li>
-                                             <li role="presentation" class="">
-                                                  <button href="#barceloneta" aria-controls="barceloneta" role="tab"
-                                                       data-toggle="tab">Sucursal de CTS en Barceloneta</button>
-                                             </li>
-                                             <li role="presentation" class="">
-                                                  <button href="#salinas" aria-controls="salinas" role="tab"
-                                                       data-toggle="tab">Sucursal de CTS en Salinas</button>
-                                             </li>
-                                             <div class="clearfix"></div>
-                                        </ul>
-                                   </li>
-                              </ul>
-                         </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+               </button>
+          </div>
+
+
+          <!-- Marketing messaging and featurettes
+  ================================================== -->
+          <!-- Wrap the rest of the page in another container to center all the content. -->
+
+          <div class="container marketing">
+
+               <!-- Three columns of text below the carousel -->
+               <div class="row">
+                    <div class="col-lg-4">
+                         <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                              preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
+                                   dy=".3em">140x140</text>
+                         </svg>
+
+                         <h2 class="fw-normal">Heading</h2>
+                         <p>Some representative placeholder content for the three columns of text below the carousel.
+                              This is the first column.</p>
+                         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                         <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                              preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
+                                   dy=".3em">140x140</text>
+                         </svg>
+
+                         <h2 class="fw-normal">Heading</h2>
+                         <p>Another exciting bit of representative placeholder content. This time, we've moved on to the
+                              second column.</p>
+                         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                         <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
+                              preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
+                                   dy=".3em">140x140</text>
+                         </svg>
+
+                         <h2 class="fw-normal">Heading</h2>
+                         <p>And lastly this, the third column of representative placeholder content.</p>
+                         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                    </div><!-- /.col-lg-4 -->
+               </div><!-- /.row -->
+
+
+               <!-- START THE FEATURETTES -->
+
+               <hr class="featurette-divider">
+
+               <div class="row featurette">
+                    <div class="col-md-7">
+                         <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
+                                   class="text-muted">It’ll blow your mind.</span></h2>
+                         <p class="lead">Some great placeholder content for the first featurette here. Imagine some
+                              exciting prose here.</p>
                     </div>
-                    <div class="col-xs-12 text-center pink">
-                         <div class="tab-content">
-                              <div role="tabpanel" style="background:none;" class="tab-pane fade in active" id="home">
-                                   <h4>Oficinas Corporativas</h4>
-                                   <p>Ave. Ponce de León 1431</p>
-                                   <p>Suite 701, Santurce, P.R. 00901</p>
-                                   <p><span><i>Tel:</i></span><a href="tel:787620500">(787) 620-5500</a> </p>
-                                   <p><span><i>Fax:</i></span><a href="tel:7876200698">(787) 620-0698</a> </p>
-                                   <!-- <a><a href="mailto:info@ctspr.com">info@ctspr.com</a></p> -->
-                                   <p><a class="modal-trigger btn" href="#md15">Ver Mapa</a></p>
-                              </div>
-                              <div role="tabpanel" style="background:none;" class="tab-pane fade" id="santurce">
-                                   <h4>Sucursal de CTS de Santurce</h4>
-                                   <p>Ave. Ponce de León 1431</p>
-                                   <p>Suites 101</p>
-                                   <p>Santurce, P.R. 00901</p>
-                                   <p><span><i>Tel:</i></span><a href="tel:7877245643">(787) 724-5643</a> </p>
-                                   <p><span><i>Fax:</i></span><a href="tel:7876200699">(787) 620-0699</a> </p>
-                                   <p><a class="modal-trigger btn" href="#md8">Ver Mapa</a></p>
-                              </div>
-                              <div role="tabpanel" style="background:none;" class="tab-pane fade" id="las-piedras">
-                                   <h4>Sucursal de CTS de Las Piedras</h4>
-                                   <p>Calle José Celso Barbosa</p>
-                                   <p>#167, Las Piedras, P.R. 00771</p>
-                                   <p><span><i>Tel:</i></span><a href="tel:7877336110">(787) 733-6110</a> </p>
-                                   <p><span><i>Fax:</i></span><a href="tel:7877336100">(787) 733-6100</a> </p>
-                                   <p><a class="modal-trigger btn" href="#md7">Ver Mapa</a></p>
-                              </div>
-                              <div role="tabpanel" style="background:none;" class="tab-pane fade" id="barceloneta">
-                                   <h4>Sucursal de CTS de Barceloneta</h4>
-                                   <p>1510 Carretera #2</p>
-                                   <p>Edificio Central-1</p>
-                                   <p>Barceloneta, P.R. 00617</p>
-                                   <p><span><i>Tel:</i></span><a href="tel:7879701335">(787) 970-1335</a> </p>
-                                   <p><span><i>Fax:</i></span><a href="tel:7879701375">(787) 970-1375</a> </p>
-                                   <p><a class="modal-trigger btn" href="#md9">Ver Mapa</a></p>
-                              </div>
-                              <div role="tabpanel" style="background:none;" class="tab-pane fade" id="san-german">
-                                   <h4>Sucursal de CTS de San Germán</h4>
-                                   <p>180 Ave. Los Atléticos,</p>
-                                   <p>San Germán, P.R. 00683</p>
-                                   <p><span><i>Tel:</i></span><a href="tel:7872642400"> (787) 264-2400</a></p>
-                                   <p><span><i>Fax:</i></span> <a href="tel:7872642630"> (787) 264-2630</a></p>
-                                   <p><a class="modal-trigger btn" href="#md6">Ver Mapa</a></p>
-                              </div>
-                              <div role="tabpanel" style="background:none;" class="tab-pane fade" id="salinas">
-                                   <h4>Sucursal de CTS de Salinas</h4>
-                                   <p>Carretera PR 3 Km 158.4,</p>
-                                   <p>B-2 Econo Building - Plaza Salinas,</p>
-                                   <p>Salinas, PR 00751</p>
-                                   <p><span><i>Tel:</i></span><a href="tel:787-849-8066"> (787) 849-8066</a></p>
+                    <div class="col-md-5">
+                         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                              width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                              aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+                                   dy=".3em">500x500</text>
+                         </svg>
 
-                                   <p><a class="modal-trigger btn" href="#mdsalinas">Ver Mapa</a></p>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="clearfix"></div>
-               </div>
-          </section>
-          <div class="clearfix"></div>
-          <section id="servicios" class="">
-               <div class="container white-text">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box-login"> <img src="img/cliente.jpg"
-                              class="img-responsive img-mio" />
-                         <div class="text-center">
-                              <h4 class="white-text min">Clientes</h4>
-                              <a class="btn-fantasma  modal-trigger" href="#modal1">Ver detalle <i
-                                        class="fa fa-eye"></i></a> <a href="http://osaswebsrv.ctspr.com/osashome.htm"
-                                   target="_blank" class="btn-fantasma">Login <i class="fa fa-sign-in"></i></a>
-                         </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 box-login"> <img
-                              src="img/empleado.jpg" class="img-responsive img-mio">
-                         <div class="text-center">
-                              <h4 class="white-text min">Empleados</h4>
-                              <a class="btn-fantasma  modal-trigger" href="#modal2">Ver detalle <i
-                                        class="fa fa-eye"></i></a> <a href="https://osaswebsrv.ctspr.com/osashomepa.htm"
-                                   target="_blank" class="btn-fantasma">Login <i class="fa fa-sign-in"></i></a>
-                         </div>
-                    </div>
-                    <div class="clearfix"></div>
-               </div>
-          </section>
-
-          <section class="galeria">
-               <div class="cont-g container">
-                    <ul>
-                         <li>
-                              <a class="fancybox" href="galeria/1.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/1.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/2.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/2.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/3.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/3.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/4.jpg" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/4.jpg" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-
-                         <li>
-                              <a class="fancybox" href="galeria/5.jpg" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/5.jpg" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/6.jpg" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/6.jpg" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/7.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/7.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/8.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/8.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/9.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/9.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/10.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/10.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-
-                         <li>
-                              <a class="fancybox" href="galeria/11.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/11.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/12.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/12.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                         <li>
-                              <a class="fancybox" href="galeria/13.png" data-fancybox-group="gallery" title=""><img
-                                        src="galeria/13.png" alt="" /></a>
-                              <div class="cont-d">
-
-                              </div>
-                         </li>
-                    </ul>
-               </div>
-          </section>
-          <!--  Contenidos -->
-          <footer class="page-footer">
-               <div class="container">
-                    <div class="row">
-                         <div class="col l6 s12">
-                              <h5 class="white-text text-center">CTS - Caribbean Temporary Services LLC</h5>
-                              <ul class="ul-footer">
-                                   <li class="pink white-text">
-                                        <p class="text-center"><i class="fa fa-mobile"></i> <a
-                                                  href="tel:787.620.5500">787.620.5500</a></p>
-                                   </li>
-                                   <li class="pink white-text">
-                                        <p class="text-center"><i class="fa fa-paper-plane-o"></i> Puerto Rico</p>
-                                   </li>
-                                   <li class="pink white-text">
-                                        <p class="text-center"><i class="fa fa-envelope-o"></i> <a
-                                                  href="contacto.html#contact_us_container"
-                                                  class="white-text">e-mail</a></p>
-                                   </li>
-                              </ul>
-                         </div>
-                         <div class="col l3 s12">
-                              <h5 class="white-text">SiteMap</h5>
-                              <ul>
-                                   <li><a class="grey-text text-lighten-3" href="index.html"><i class="fa fa-home"></i>
-                                             Home</a></li>
-                                   <li><a class="grey-text text-lighten-3" href="nosotros.html"><i
-                                                  class="fa fa-book"></i> Sobre Nosotros</a></li>
-                                   <li><a class="grey-text text-lighten-3" href="servicios.html"><i
-                                                  class="fa fa-cogs"></i> Servicios</a></li>
-                                   <li><a class="grey-text text-lighten-3" href="contacto.html"><i
-                                                  class="fa fa-envelope"></i> Contacto</a></li>
-                                   <li><a class="grey-text text-lighten-3" href="empleos.html"><i
-                                                  class="fa fa-info-circle"></i>Noticias</a></li>
-                              </ul>
-                         </div>
-                         <div class="col l3 s12">
-                              <h5 class="white-text">Encuéntranos</h5>
-                              <ul>
-                                   <li class="link-social"> <a class="btn-floating amber darken-2" target="_blank"
-                                             href="http://www.superpagespr.com"><img src="img/ax.png"
-                                                  class="img-responsive"></a> </li>
-                                   <li class="link-social"><a class="btn-floating blue darken-2" target="_blank"
-                                             href="https://www.facebook.com/CTSEmpleos"><i
-                                                  class="fa fa-facebook"></i></a></li>
-                                   <li class="link-social"><a class="btn-floating blue" target="_blank"
-                                             href="https://twitter.com/ctsempleos"><i class="fa fa-twitter"></i></a>
-                                   </li>
-                                   <li class="link-social"><a class="btn-floating blue darken-2" target="_blank"
-                                             href="https://www.instagram.com/ctsempleos/"><i
-                                                  class="fa fa-instagram"></i></a> </li>
-                                   <li class="link-social"><a class="btn-floating blue darken-2" target="_blank"
-                                             href="https://www.linkedin.com/company/ctspr/?viewAsMember=true"><i
-                                                  class="fa fa-linkedin"></i></a></li>
-                                   <li class="link-social"><a class="btn-floating blue darken-2" target="_blank"
-                                             href="https://www.indeed.com/cmp/Caribbean-Temporary-Services,-Llc./jobs?start=12#cmp-menu-container"><i
-                                                  class="fa fa-indeed">Ind</i></a></li>
-                              </ul>
-                         </div>
                     </div>
                </div>
-               <div class="footer-copyright">
-                    <div class="container"> <a class="white-text left" href="http://www.axesadigital.com"
-                              target="blank">© Creado por Axesa</a> <a class="white-text right"
-                              href="http://www.superpagespr.com" target="blank">Powered by
-                              SuperPagesPR.com</a> </div>
+
+               <hr class="featurette-divider">
+
+               <div class="row featurette">
+                    <div class="col-md-7 order-md-2">
+                         <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span
+                                   class="text-muted">See for yourself.</span></h2>
+                         <p class="lead">Another featurette? Of course. More placeholder content here to give you an
+                              idea of how this layout would work with some actual real-world content in place.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                              width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                              aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+                                   dy=".3em">500x500</text>
+                         </svg>
+
+                    </div>
                </div>
+
+               <hr class="featurette-divider">
+
+               <div class="row featurette">
+                    <div class="col-md-7">
+                         <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
+                                   class="text-muted">Checkmate.</span></h2>
+                         <p class="lead">And yes, this is the last block of representative placeholder content. Again,
+                              not really intended to be actually read, simply here to give you a better view of what
+                              this would look like with some actual content. Your content.</p>
+                    </div>
+                    <div class="col-md-5">
+                         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                              width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
+                              aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
+                                   dy=".3em">500x500</text>
+                         </svg>
+
+                    </div>
+               </div>
+
+               <hr class="featurette-divider">
+
+               <!-- /END THE FEATURETTES -->
+
+          </div><!-- /.container -->
+
+
+          <!-- FOOTER -->
+          <footer class="container">
+               <p class="float-end"><a href="#">Back to top</a></p>
+               <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
           </footer>
-     </div>
-     <div id="md2" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Pueblos en Sucursal de CTS de Barceloneta</h5>
-               <div class="contenido-modal">
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> ARECIBO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> BARCELONETA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> BARRANQUITAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CAMUY</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CATAÑO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CIALES</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> COMERIO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> COROZAL</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> DORADO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> FLORIDA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> HATILLO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> ISABELA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> JAYUYA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> LARES</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> MANATI</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> MOROVIS</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> NARANJITO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> OROCOVIS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> QUEBRADILLAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> TOA ALTA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> TOA BAJA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> UTUADO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> VEGA ALTA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=3"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> VEGA BAJA</a></li>
-                         </ul>
-                    </div>
-                    <div class="divider clearfix"></div>
-                    <p class="md2-p">Selecciona tu pueblo y verifica las ofertas de trabajo.</p>
-                    <div class="clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="md3" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Pueblos en Sucursal de CTS de Santurce</h5>
-               <div class="contenido-modal">
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> AGUAS BUENAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> BAYAMON</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CANOVANAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CAROLINA</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> GUAYNABO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> LOIZA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> LUQUILLO</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> RIO GRANDE</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> SAN JUAN</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=1"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> TRUJILLO ALTO</a></li>
-                         </ul>
-                    </div>
-                    <div class="divider clearfix"></div>
-                    <p class="md2-p">Selecciona tu pueblo y verifica las ofertas de trabajo.</p>
-                    <div class="clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="md4" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Pueblos en Sucursal de CTS de Las Piedras</h5>
-               <div class="contenido-modal">
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> AIBONITO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> ARROYO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CAGUAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CAYEY</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CEIBA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CIDRA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CULEBRA</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> FAJARDO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> GUAYAMA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> GURABO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> HUMACAO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> JUNCOS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> LAS PIEDRAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> MAUNABO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> NAGUABO</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> PATILLAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> SALINAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> SAN LORENZO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> VIEQUES</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=2"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> YABUCOA</a></li>
-                         </ul>
-                    </div>
-                    <div class="divider clearfix"></div>
-                    <p class="md2-p">Selecciona tu pueblo y verifica las ofertas de trabajo.</p>
-                    <div class="clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="md5" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Pueblos en Sucursal de CTS de San Germán</h5>
-               <div class="contenido-modal">
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> ADJUNTAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> AGUADA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> AGUADILLA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> AÑASCO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> CABO ROJO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> COAMO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> GUANICA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> GUAYANILLA</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> HORMIGUEROS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> JUANA DIAZ</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> LAJAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> LAS MARIAS</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> MARICAO</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> MAYAGUEZ</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> MOCA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> PEÑUELAS</a></li>
-                         </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                         <ul class="ul-md-2">
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> PONCE</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> RINCON</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> SABANA GRANDE</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> SAN GERMAN</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> SAN SEBASTIAN</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> SANTA ISABEL</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> VILLALBA</a></li>
-                              <li><a href="http://osaswebsrv.ctspr.com/osasweb/owmenupa.exe?SesId=&amp;CompId=CTS&amp;Guest=2&amp;Passwd=&amp;EmpId&amp;Branch=4"
-                                        target="_blank"><i class="fa fa-arrow-circle-right"></i> YAUCO</a></li>
-                         </ul>
-                    </div>
-                    <div class="divider clearfix"></div>
-                    <p class="md2-p">Selecciona tu pueblo y verifica las ofertas de trabajo.</p>
-                    <div class="clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="md6" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Sucursal de CTS en San Germán</h5>
-               <div class="contenido-modal">
-                    <iframe
-                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3792.829506689849!2d-67.03357365082314!3d18.0794458311878!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c1d4af106b54541%3A0x5be8f5a34058d0b9!2sCaribbean%20Temporary%20Services!5e0!3m2!1ses!2sdo!4v1610474119108!5m2!1ses!2sdo"
-                         width="100%" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                    <div class="divider clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="mdsalinas" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Sucursal de CTS en Salinas</h5>
-               <div class="contenido-modal">
-                    <iframe
-                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124772.12834752031!2d-66.5999416679489!3d18.094324292049755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c1ccbe7726a5659%3A0x72d9c795ef46e441!2sCTS%20-%20Caribbean%20Temporary%20Services%20-%20Salinas!5e0!3m2!1ses-419!2sdo!4v1659382078776!5m2!1ses-419!2sdo"
-                         width="100%" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+     </main>
 
-                    <div class="divider clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="md7" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Sucursal de CTS de Las Piedras</h5>
-               <div class="contenido-modal">
-                    <iframe
-                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3790.5673004124947!2d-65.87239094851326!3d18.18383618754511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c03586f89b9fbed%3A0x3bd77a8ff6611694!2s167+Calle+Jos%C3%A9+Celso+Barbosa%2C+Las+Piedras%2C+00771%2C+Puerto+Rico!5e0!3m2!1ses!2sdo!4v1561580081780!5m2!1ses!2sdo"
-                         width="100%" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                    <div class="divider clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="md8" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Sucursal de CTS de Santurce</h5>
-               <div class="contenido-modal">
-                    <iframe
-                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.803000418786!2d-66.07173484851083!3d18.447251587390138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f4a725bb9b5%3A0x30be60a354f89c16!2s1431+Avenida+Juan+Ponce+de+Le%C3%B3n+%23101%2C+San+Juan%2C+00909%2C+Puerto+Rico!5e0!3m2!1ses!2sdo!4v1561580359297!5m2!1ses!2sdo"
-                         width="100%" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                    <div class="divider clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-     <div id="md9" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Sucursal de CTS de Barceloneta</h5>
-               <div class="contenido-modal">
-                    <iframe
-                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.1130289666285!2d-66.55436734851115!3d18.433176487398402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c031f6ec9726cdd%3A0x8c061df177fae594!2s1510+Carr+Puerto+Rico+2%2C+Barceloneta%2C+00617%2C+Puerto+Rico!5e0!3m2!1ses!2sdo!4v1561580154576!5m2!1ses!2sdo"
-                         width="100%" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                    <div class="divider clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
 
-     <!-- Modal Structure -->
-     <div id="modal2" class="modal">
-          <div class="modal-content">
-               <h4 class="titulo-modal pink white-text">Empleados</h4>
-               <div class="divider"></div>
-               <p>En esta sección nuestros empleados tendrán acceso a:<br>
-               </p>
-               <ul>
-                    <li>Información biográfica (nombre, dirección, teléfono, etc.)</li>
-                    <li>Histórico de pago por semana y sus deducciones</li>
-                    <li>Acumulación histórica de pago al año corriente</li>
-               </ul>
-               Si posee Employee ID y Password, presiona el botón identificado como Login. De lo contrario,
-               solicitar el código de usuario y contraseña completando el formulario de <a
-                    href="img/Contraseña_para_empleados.pdf" class="blue-text">Solicitud de Acceso (contraseña) para
-                    empleados</a> y enviarlo a <a href="mailto:empleados@ctspr.com"
-                    class="black-text">empleados@ctspr.com</a>
-               <p></p>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class="modal-action modal-close waves-effect waves-green btn-flat  pink white-text">Cerrar</a>
-          </div>
-     </div>
+     <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+          crossorigin="anonymous"></script>
 
-     <!-- Modal Structure -->
-     <div id="modal1" class="modal">
-          <div class="modal-content">
-               <h4 class="titulo-modal pink white-text">Clientes</h4>
-               <div class="divider"></div>
-               <p>En esta sección nuestros clientes tendrán acceso a:<br>
-               </p>
-               <ul>
-                    <li>Balance de su cuenta</li>
-                    <li>Estatus de órdenes</li>
-                    <li>Registrar nuevas requisiciones de servicio</li>
-               </ul>
-               Si posee Customer ID y Password, presiona el botón identificado como Login. De lo contrario,
-               solicitar el código de usuario y contraseña completando el formulario de <a
-                    href="Solicitud_acceso_cliente.pdf" class="blue-text">Solicitud de Acceso (contraseña) de
-                    Clientes</a> a Website y enviarlo a <a href="mailto:clientes@ctspr.com"
-                    class="black-text">clientes@ctspr.com</a>.
-               <p></p>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class="modal-action modal-close waves-effect waves-green btn-flat  pink white-text">Cerrar</a>
-          </div>
-     </div>
-     <div id="md15" class="modal bottom-sheet">
-          <div class="modal-content">
-               <h5 class="pink-text">Oficinas Centrales</h5>
-               <div class="contenido-modal">
-                    <iframe
-                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.803000418795!2d-66.07173484851081!3d18.447251587390138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c036f4a725bb9b5%3A0xd6d3702cda646004!2s1431+Avenida+Juan+Ponce+de+Le%C3%B3n+Suite+701%2C+San+Juan%2C+00909%2C+Puerto+Rico!5e0!3m2!1ses!2sdo!4v1561579792544!5m2!1ses!2sdo"
-                         width="100%" height="200" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-                    <div class="divider clearfix"></div>
-               </div>
-          </div>
-          <div class="modal-footer"> <a href="#!"
-                    class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a> </div>
-     </div>
-
-     <!-- ========= Scripts de la pagina todos son importantes ======== -->
-     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="js/materialize.min.js"></script>
-
-     <!-- Galeria -->
-     <script type="text/javascript" src="js/pa-gallery/js/jquery.fancybox.js"></script>
-     <!-- ========= Scripts de la pagina ======== -->
-
+</body>
 
 </html>
