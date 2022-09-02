@@ -1,5 +1,10 @@
-<h1>Add Recruiter</h1>
+{% extends "base.html" %}
 
+{% block title %}My amazing blog{% endblock %}
+
+{% block content %}
+
+<h1>Add Recruiter</h1>
 {% if submitted %}
   Your Town was added succefully
 
@@ -14,3 +19,4 @@
   </form>
 
 {% endif %}
+{% endblock %}
