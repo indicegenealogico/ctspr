@@ -32,11 +32,6 @@ class RecruiterForm(ModelForm):
     
 #==============================
 class JobForm(ModelForm):
-  class Meta:
-    model        = Job
-    fields       = '__all__'
-    exclude      = ('created_date',)
-    
   closing_date   = forms.DateField(
         widget=forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker'}),
         input_formats=('%m/%d/%Y', )
@@ -45,5 +40,12 @@ class JobForm(ModelForm):
         widget=forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker'}),
         input_formats=('%m/%d/%Y', )
         )
+
+  class Meta:
+    model        = Job
+    fields       = '__all__'
+    exclude      = ('created_date',)
+    
+
 
   
