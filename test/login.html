@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/login.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" method="POST" action="/osasweb/owmenupa.exe">
+      <object data="/img/logo_cts.png" type="">
+        <img class="mb-4" src="https://osaswebsrv.ctspr.com/image/logo_cts.png" alt="" height="72">
+      </object>
+      <h1 class="h3 mb-3 font-weight-normal">Bienvenido!</h1>
+      <label for="emplID" class="sr-only">ID de Empleado</label>
+      <input type="email" id="emplID" class="form-control" name="EmpID" placeholder="ID de empleado" required autofocus>
+
+      <label for="inputPassword" class="sr-only">Contraseña</label>
+      <input type="password" id="inputPassword" class="form-control" name="Passwd" placeholder="Contraseña" required>
+      <input type="hidden" name="SesId" value="">
+      <input type="hidden" name="Guest" value="0">
+      <input type="hidden" name="CompID" value="CTS">
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+  </body>
+</html>

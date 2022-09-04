@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@300;400&display=swap");
+
+:root {
+  --primary: #ed1c8f; /*Deep Cerise*/
+  --suplementario: #1D8FED; /*Bleu De France*/
+  --secondary: #3371DF;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+.btn {
+  background-color: var(--secondary);
+}
+
+/* GENERAL
+  ------------------------- */
+.divider {
+  height: 16px;
+  background-color: var(--primary);
+}
+
+
+.card {
+  margin-bottom: 3rem;
+}
+
+#sucursales .lh-1, #empleados .lh-1 {
+  color: var(--primary);
+}
+
+/* Featurettes
+  ------------------------- */
+
+
+.featurette-heading {
+  letter-spacing: -.05rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+
+/* NAVIGATION BAR
+  ------------------------- */
+li>a>i {
+  font-size: 1.3rem;
+}
+a.active {
+  color: var(--primary) !important;
+  
+}
+
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.navbar {
+  /* background: none !important; */
+}
+#myCarousel {
+  margin-top: 45px;
+}
+
+/* OFERTAS
+  ------------------------- */
+#ofertas {
+  background-color: var(--secondary);/*#666*/
+  min-height: 300px;
+  color: white;
+  border-bottom: 16px solid rgba(0, 0, 0, 0.3)
+}
+#ofertas .lead, .form-select{
+  /* color: red; */
+  max-width: 400px;
+}
+#ofertas .second {
+  /* color: red; */
+  max-width: 700px;
+}
+
+
+
+/* SUCURSALES
+  ------------------------- */
+  #sucursales h5 {
+    color: var(--primary) !important;
+    font-size: 1.5rem;
+  }
+
+
+
+/* EMPLEADOS
+  ------------------------- */
+#empleados {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#empleados .lead {
+  margin: 0 auto;
+  max-width: 55rem;
+  text-align: justify;
+}
+#empleados p.lead {
+  padding-top: 1.5rem;
+}
+
+.btns {
+  padding-top: 2rem;
+}
+
+
+
+/* CAROUSEL
+  ------------------------- */
+.carousel {
+  background: #007aeb;
+}
+
+.carousel-item .img-fluid {
+  width: 100%;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+
+footer {
+  border-top: 16px solid rgba(0, 0, 0, 0.3)
+}
+footer a > i {
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+  .d-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .featurette-divider {
+    margin: 3rem 0;
+  }
+
+}
+
+@media only screen and (min-width: 991px) {
+  #sucursales .lh-1, #empleados .lh-1 {
+    padding-bottom: 3rem;
+  }
+
+  #sucursales{
+    margin-top: 4rem;
+  }
+
+}

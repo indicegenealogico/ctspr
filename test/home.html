@@ -2,323 +2,440 @@
 <html lang="en" data-livestyle-extension="available">
 
 <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="description" content="">
-     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-     <meta name="generator" content="Hugo 0.101.0">
-     <title>Carousel Template · Bootstrap v5.2</title>
-
-     <!-- Bootstrap CSS Framework -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
-     <!-- Favicons -->
-     <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-     <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
-     <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
-     <meta name="theme-color" content="#712cf9">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.101.0">
+	<title>Carousel Template · Bootstrap v5.2</title>
 
 
-     <style>
-          .bd-placeholder-img {
-               font-size: 1.125rem;
-               text-anchor: middle;
-               -webkit-user-select: none;
-               -moz-user-select: none;
-               user-select: none;
-          }
+	<!-- Bootstrap CSS Framework -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
 
-          @media (min-width: 768px) {
-               .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-               }
-          }
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-          .b-example-divider {
-               height: 3rem;
-               background-color: rgba(0, 0, 0, .1);
-               border: solid rgba(0, 0, 0, .15);
-               border-width: 1px 0;
-               box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-          }
-
-          .b-example-vr {
-               flex-shrink: 0;
-               width: 1.5rem;
-               height: 100vh;
-          }
-
-          .bi {
-               vertical-align: -.125em;
-               fill: currentColor;
-          }
-
-          .nav-scroller {
-               position: relative;
-               z-index: 2;
-               height: 2.75rem;
-               overflow-y: hidden;
-          }
-
-          .nav-scroller .nav {
-               display: flex;
-               flex-wrap: nowrap;
-               padding-bottom: 1rem;
-               margin-top: -1px;
-               overflow-x: auto;
-               text-align: center;
-               white-space: nowrap;
-               -webkit-overflow-scrolling: touch;
-          }
-     </style>
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+	<link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+	<meta name="theme-color" content="#712cf9">
 
 
-     <!-- Custom styles for this template -->
-     <link href="carousel.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="css/cts_style.css">
+
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1078.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-light">
+			<div class="container">
+				<div class="d-flex">
+					<a class="navbar-brand" href="#">
+						<img src="img/logo_cts.png" alt="Company Logo" width="160" height="64"
+							class="d-inline-block align-text-top">
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+						aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarScroll">
+					<ul class="navbar-nav ms-auto flex-nowrap nav-tabs">
+						<li class="nav-item">
+							<a href="#" class="nav-link m-2 menu-item"><i class="bi-house-heart me-1"></i>Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link m-2 menu-item"><i class="bi-book me-1"></i>Sobre Nosotros</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link m-2 menu-item"><i class="bi-gear me-1"></i>Servicios</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link m-2 menu-item"><i class="bi-sun me-1"></i>COVID-19</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link m-2 menu-item"><i class="bi-life-preserver me-1"></i>Solicita Empleo</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link m-2 menu-item"><i class="bi-envelope me-1"></i>Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active"
+					aria-current="true"></button>
+				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item" data-bs-interval="10000">
+					<picture>
+						<source srcset="img/carousel/slide1/2000500.png" media="(min-width: 1400px)">
+						<source srcset="img/carousel/slide1/1400500.png" media="(min-width: 769px)">
+						<source srcset="img/carousel/slide1/800500.png" media="(min-width: 577px)">
+						<img srcset="img/carousel/slide1/600500.png" alt="responsive image" class="d-block img-fluid">
+					</picture>
 
-     <header>
-          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-               <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Carousel</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                         aria-label="Toggle navigation">
-                         <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                              <li class="nav-item">
-                                   <a class="nav-link active" aria-current="page" href="#">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                   <a class="nav-link" href="#">Link</a>
-                              </li>
-                              <li class="nav-item">
-                                   <a class="nav-link disabled">Disabled</a>
-                              </li>
-                         </ul>
-                         <form class="d-flex" role="search">
-                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                              <button class="btn btn-outline-success" type="submit">Search</button>
-                         </form>
-                    </div>
-               </div>
-          </nav>
-     </header>
+					<!-- <div class="container"> -->
+					<div class="carousel-caption text-start">
+						<h1>Echando pa'lante.</h1>
+						<p>Sobre 35 años contribuyendo al crecimiento de las empresas en Puerto Rico…</p>
+						<!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+					</div>
+					<!-- </div> -->
+				</div>
+				<div class="carousel-item active" data-bs-interval="10000">
+					<picture>
+						<source srcset="img/carousel/slide2/2000500.png" media="(min-width: 1400px)">
+						<source srcset="img/carousel/slide2/1400500.png" media="(min-width: 769px)">
+						<source srcset="img/carousel/slide2/800500.png" media="(min-width: 577px)">
+						<img srcset="img/carousel/slide2/600500.png" alt="responsive image" class="d-block img-fluid">
+					</picture>
 
-     <main>
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-               <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
-                         aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
-                         class="active" aria-current="true"></button>
-                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
-                         aria-label="Slide 3"></button>
-               </div>
-               <div class="carousel-inner">
-                    <div class="carousel-item">
-                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <rect width="100%" height="100%" fill="#777"></rect>
-                         </svg>
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>La Experiencia es mucho cuento.</h1>
+							<p>Trayectoria estable y sólida en el reclutamiento de empleados temporeros…</p>
+							<!-- <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> -->
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="10000">
+					<picture>
+						<source srcset="img/carousel/slide3/2000500.png" media="(min-width: 1400px)">
+						<source srcset="img/carousel/slide3/1400500.png" media="(min-width: 769px)">
+						<source srcset="img/carousel/slide3/800500.png" media="(min-width: 577px)">
+						<img srcset="img/carousel/slide3/600500.png" alt="responsive image" class="d-block img-fluid">
+					</picture>
 
-                         <div class="container">
-                              <div class="carousel-caption text-start">
-                                   <h1>Example headline.</h1>
-                                   <p>Some representative placeholder content for the first slide of the carousel.</p>
-                                   <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="carousel-item active">
-                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <rect width="100%" height="100%" fill="#777"></rect>
-                         </svg>
+					<div class="container">
+						<div class="carousel-caption text-end">
+							<h1>Satisfacción garantizada.</h1>
+							<p>Le brindamos a nuestros clientes el personal que se ajuste a sus necesidades.</p>
+							<!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</header>
 
-                         <div class="container">
-                              <div class="carousel-caption">
-                                   <h1>Another example headline.</h1>
-                                   <p>Some representative placeholder content for the second slide of the carousel.</p>
-                                   <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="carousel-item">
-                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <rect width="100%" height="100%" fill="#777"></rect>
-                         </svg>
+	<main>
+		<section id="ofertas" class="container-fluid">
+			<div class="container">
+				<div class="row pt-5 pb-5">
+					<div class="col-lg-5">
+						<h3 class="fw-normal lh-2">Encuantra tu futuro aquí</h3>
+						<p class="lead">Busca ofertas de empleos disponibles por región en cada una de nuestras cinco sucursales</p>
+					</div>
+					<div class="col-lg-7">
+						<h3 class="fw-normal lh-1">Ver ofertas de empleo por pueblo</h3>
+						<select class="form-select" aria-label="Seleccione algo">
+							<option value="municipio" class="">Seleccione su pueblo</option>
+							<option value="jobs/index.php?q=SanGerman"> Adjuntas</option>
+							<option value="jobs/index.php?q=SanGerman"> Aguada</option>
+							<option value="jobs/index.php?q=SanGerman"> Aguadilla</option>
+							<option value="jobs/index.php?q=Santurce"> Aguas Buenas</option>
+							<option value="jobs/index.php?q=LasPiedras"> Aibonito</option>
+							<option value="jobs/index.php?q=Barceloneta"> Arecibo</option>
+							<option value="jobs/index.php?q=LasPiedras"> Arroyo</option>
+							<option value="jobs/index.php?q=SanGerman"> Añasco</option>
+							<option value="jobs/index.php?q=Barceloneta"> Barceloneta</option>
+							<option value="jobs/index.php?q=Barceloneta"> Barranquitas</option>
+							<option value="jobs/index.php?q=Santurce"> Bayamón</option>
+							<option value="jobs/index.php?q=SanGerman"> Cabo Rojo</option>
+							<option value="jobs/index.php?q=LasPiedras"> Caguas</option>
+							<option value="jobs/index.php?q=Barceloneta"> Camuy</option>
+							<option value="jobs/index.php?q=Santurce"> Canóvanas </option>
+							<option value="jobs/index.php?q=Santurce"> Carolina</option>
+							<option value="jobs/index.php?q=Santurce"> Cataño</option>
+							<option value="jobs/index.php?q=LasPiedras"> Cayey</option>
+							<option value="jobs/index.php?q=LasPiedras"> Ceiba</option>
+							<option value="jobs/index.php?q=Barceloneta"> Ciales</option>
+							<option value="jobs/index.php?q=LasPiedras"> Cidra</option>
+							<option value="jobs/index.php?q=SanGerman"> Coamo</option>
+							<option value="jobs/index.php?q=Barceloneta"> Comerío</option>
+							<option value="jobs/index.php?q=Barceloneta"> Corozal</option>
+							<option value="jobs/index.php?q=LasPiedras"> Culebra</option>
+							<option value="jobs/index.php?q=Barceloneta"> Dorado</option>
+							<option value="jobs/index.php?q=LasPiedras"> Fajardo</option>
+							<option value="jobs/index.php?q=Barceloneta"> Florida</option>
+							<option value="jobs/index.php?q=SanGerman"> Guánica</option>
+							<option value="jobs/index.php?q=LasPiedras"> Guayama</option>
+							<option value="jobs/index.php?q=SanGerman"> Guayanilla</option>
+							<option value="jobs/index.php?q=Santurce"> Guaynabo</option>
+							<option value="jobs/index.php?q=LasPiedras"> Gurabo</option>
+							<option value="jobs/index.php?q=SanGerman"> Guánica</option>
+							<option value="jobs/index.php?q=Barceloneta"> Hatillo</option>
+							<option value="jobs/index.php?q=SanGerman"> Hormigueros</option>
+							<option value="jobs/index.php?q=LasPiedras"> Humacao</option>
+							<option value="jobs/index.php?q=Barceloneta"> Isabela</option>
+							<option value="jobs/index.php?q=Barceloneta"> Jayuya</option>
+							<option value="jobs/index.php?q=SanGerman"> Juana Díaz</option>
+							<option value="jobs/index.php?q=LasPiedras"> Juncos</option>
+							<option value="jobs/index.php?q=SanGerman"> Lajas</option>
+							<option value="jobs/index.php?q=Barceloneta"> Lares</option>
+							<option value="jobs/index.php?q=SanGerman"> Las Marías</option>
+							<option value="jobs/index.php?q=LasPiedras"> Las Piedras</option>
+							<option value="jobs/index.php?q=Santurce"> Loíza </option>
+							<option value="jobs/index.php?q=Santurce"> Luquillo</option>
+							<option value="jobs/index.php?q=Barceloneta"> Manatí</option>
+							<option value="jobs/index.php?q=SanGerman"> Maricao</option>
+							<option value="jobs/index.php?q=LasPiedras"> Maunabo</option>
+							<option value="jobs/index.php?q=SanGerman"> Mayagüez</option>
+							<option value="jobs/index.php?q=SanGerman"> Moca</option>
+							<option value="jobs/index.php?q=Barceloneta"> Morovis</option>
+							<option value="jobs/index.php?q=LasPiedras"> Naguabo</option>
+							<option value="jobs/index.php?q=Barceloneta"> Naranjito</option>
+							<option value="jobs/index.php?q=Barceloneta"> Orocovis</option>
+							<option value="jobs/index.php?q=LasPiedras"> Patillas</option>
+							<option value="jobs/index.php?q=SanGerman"> Peñuelas</option>
+							<option value="jobs/index.php?q=SanGerman"> Ponce</option>
+							<option value="jobs/index.php?q=Barceloneta"> Quebradillas</option>
+							<option value="jobs/index.php?q=SanGerman"> Rincón</option>
+							<option value="jobs/index.php?q=Santurce"> Rio Grande</option>
+							<option value="jobs/index.php?q=SanGerman"> Sabana Grande</option>
+							<option value="jobs/index.php?q=LasPiedras"> Salinas</option>
+							<option value="jobs/index.php?q=SanGerman"> San Germán</option>
+							<option value="jobs/index.php?q=Santurce"> San Juan</option>
+							<option value="jobs/index.php?q=LasPiedras"> San Lorenzo</option>
+							<option value="jobs/index.php?q=SanGerman"> San Sebastián</option>
+							<option value="jobs/index.php?q=SanGerman"> Santa Isabel</option>
+							<option value="jobs/index.php?q=Barceloneta"> Toa Alta</option>
+							<option value="jobs/index.php?q=Barceloneta"> Toa Baja</option>
+							<option value="jobs/index.php?q=Santurce"> Trujillo Alto</option>
+							<option value="jobs/index.php?q=Barceloneta"> Utuado</option>
+							<option value="jobs/index.php?q=Barceloneta"> Vega Alta</option>
+							<option value="jobs/index.php?q=Barceloneta"> Vega Baja</option>
+							<option value="jobs/index.php?q=LasPiedras"> Vieques</option>
+							<option value="jobs/index.php?q=SanGerman"> Villalba</option>
+							<option value="jobs/index.php?q=LasPiedras"> Yabucoa</option>
+							<option value="jobs/index.php?q=SanGerman"> Yauco</option>
+						</select>
+						<p class="lead second">Antes de pasar a la solicitud de empleo, debe anotar el número de referencia de la posición
+							a la cual interesa aplicar para que lo anote en el espacio provisto en la solicitud.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="sucursales" class="container pt-5">
+			<h2 class="featurette-heading fw-normal lh-1">NUESTRAS OFICINAS</h2>
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="card">
+						<img src="img/branches/lp.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Oficinas Corporativas</h5>
+							<address>
+								<a href="https://goo.gl/maps/MfYaQTTrJt9gZuYv6">
+									1431 Ave. Ponce de León<br>
+									Suite 701, Santurce, PR-00901<br>
+								</a>
+								Tel.: <a href="7876205500">787-620-5500</a><br>
+								Fax.: 787-620-0698
+							</address>
+							<a href="#" class="btn btn-primary">Contáctanos</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="card">
+						<img src="img/branches/lp.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Sucursal Santurce</h5>
+							<address>
+								<a href="https://goo.gl/maps/MfYaQTTrJt9gZuYv6">
+									1431 Ave. Ponce de León<br>
+									Suite 101, Santurce, PR-00901<br>
+								</a>
+								Tel.: <a href="7877245643">787-724-5643</a><br>
+								Fax.: 787-620-0699
+							</address>
+							<a href="#" class="btn btn-primary">Ver Ofertas de Empleos</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="card">
+						<img src="img/branches/lp.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Sucursal Las Piedras</h5>
+							<address>
+								<a href="https://goo.gl/maps/NQtiLXs3K9xjbJVV8">
+									167 Calle José Celso Barbosa<br>
+									Las Piedras, PR-00771<br>
+								</a>
+								Tel.: <a href="7877336110">787-733-6110</a><br>
+								Fax.: 787-733-6100
+							</address>
+							<a href="#" class="btn btn-primary">Ver Ofertas de Empleos</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="card">
+						<img src="img/branches/sg.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Sucursal Barceloneta</h5>
+							<address>
+								<a href="https://goo.gl/maps/AYuZjBh8tb4FxVKs8">
+									1510 Carr. #2 Edif. Cantral-1<br>
+									Barcelonata, PR-00617<br>
+								</a>
+								Tel.: <a href="787970-1335">787-970-1335</a><br>
+								Fax.: 787-970-1375
+							</address>
+							<a href="#" class="btn btn-primary">Ver Ofertas de Empleos</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="card">
+						<img src="img/branches/sg.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Sucursal San Germán</h5>
+							<address>
+								<a href="https://goo.gl/maps/QSekWY7D1wucRPRU6">
+									180 Ave. Los Atléticos<br>
+									San Germán, PR-00683<br>
+								</a>
+								Tel.: <a href="787264-2400">787-264-2400</a><br>
+								Fax.: 787-264-2630
+							</address>
+							<a href="#" class="btn btn-primary">Ver Ofertas de Empleos</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="card">
+						<img src="img/branches/sg.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Sucursal Salinas</h5>
+							<address>
+								<a href="https://goo.gl/maps/PUQLD5d7aisY5Lnc6">
+									Km. 158.4, Carr. PR 3<br>
+									B2 Econo Building - Plaza Salinas<br>
+									Salinas, PR-00751<br>
+								</a>
+								Tel.: <a href="7878498066">787-849-8066</a><br>
 
-                         <div class="container">
-                              <div class="carousel-caption text-end">
-                                   <h1>One more for good measure.</h1>
-                                   <p>Some representative placeholder content for the third slide of this carousel.</p>
-                                   <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-               <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-               </button>
-               <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-               </button>
-          </div>
+							</address>
+							<a href="#" class="btn btn-primary">Ver Ofertas de Empleos</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<hr>
 
-          <!-- Marketing messaging and featurettes
-   ================================================== -->
-          <!-- Wrap the rest of the page in another container to center all the content. -->
+		<section id="empleados" class="py-5">
+			<div class="container">
+				<h2 class="featurette-heading fw-normal lh-1">NUESTROS EMPLEAODS</h2>
+				<img src="img/empleado.jpg" alt="" class="img-fluid">
+			</div>
+			<div class="divider container-fluid"></div>
+			<div class="container">
+				<div class="container">
+					<p class="lead">En esta sección nuestros empleados tendrán acceso a:</p><br>
+					<ul class="lead">
+						<li>Información biográfica (nombre, dirección, teléfono, etc.)</li>
+						<li>Histórico de pago por semana y sus deducciones</li>
+						<li>Acumulación histórica de pago al año corriente</li>
+					</ul>
+					<p class="lead">Si posee un Employee ID y Password, presiona el botón identificado como Login para acceder a
+						su cueta. De lo contrario, solicite un código de usuario y contraseña completando el formulario de Solicitud
+						de Acceso para empleados y envíelo a <a href="empleados@ctspr.com">empleados@ctspr.com</a></p>
+				</div>
 
-          <div class="container marketing">
+				<div class="btns d-grid gap-2 col-md-6 col-xl-4 mx-auto">
+					<a href="login.html" class="btn btn-primary btn-lg" type="button"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
+					<a href="#link" class="btn btn-primary btn-lg" type="button"><i class="bi bi-credit-card me-2"></i>Solicitar Credenciales</a>
+					
+				</div>
+			</div>
+		</section>
 
-               <!-- Three columns of text below the carousel -->
-               <div class="row">
-                    <div class="col-lg-4">
-                         <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                              preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-                                   dy=".3em">140x140</text>
-                         </svg>
+	</main>
 
-                         <h2 class="fw-normal">Heading</h2>
-                         <p>Some representative placeholder content for the three columns of text below the carousel.
-                              This is the first column.</p>
-                         <p><a class="btn btn-secondary" href="#">View details »</a></p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                         <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                              preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-                                   dy=".3em">140x140</text>
-                         </svg>
+	<footer class="text-center text-lg-start bg-light text-muted">
+		<section class="p-4 border-bottom">
+			<div class="container d-flex justify-content-center justify-content-lg-between">
+				<div class="me-5 d-none d-lg-block">
+					<span>Encuéntranos en nuestras redes sociales:</span>
+				</div>
+				<div>
+					<a href="" class="me-4 text-reset"><i class="bi-facebook"></i></a>
+					<a href="" class="me-4 text-reset"><i class="bi-twitter"></i></a>
+					<a href="" class="me-4 text-reset"><i class="bi-instagram"></i></a>
+					<a href="" class="me-4 text-reset"><i class="bi-linkedin"></i></a>
+				</div>
+			</div>
+		</section>
 
-                         <h2 class="fw-normal">Heading</h2>
-                         <p>Another exciting bit of representative placeholder content. This time, we've moved on to the
-                              second column.</p>
-                         <p><a class="btn btn-secondary" href="#">View details »</a></p>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                         <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-                              preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
-                                   dy=".3em">140x140</text>
-                         </svg>
+		<section class="">
+			<div class="container text-center text-md-start mt-5">
+				<div class="row mt-3">
+					<div class="col-md-5 col-lg-7 col-xl-7 mx-auto mb-4">
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="bi-gem"></i>CTS - Caribbean Temporary Services LLC
+						</h6>
+						<p>
+							Here you can use rows and columns to organize your footer content. Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit.
+						</p>
+					</div>
 
-                         <h2 class="fw-normal">Heading</h2>
-                         <p>And lastly this, the third column of representative placeholder content.</p>
-                         <p><a class="btn btn-secondary" href="#">View details »</a></p>
-                    </div><!-- /.col-lg-4 -->
-               </div><!-- /.row -->
+					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+						<h6 class="text-uppercase fw-bold mb-4">Site Map</h6>
+						<p><a href="#!" class="text-reset"><i class="bi-house-heart me-3"></i>Inicio</a></p>
+						<p><a href="#!" class="text-reset"><i class="bi-book me-3"></i>Acerca</a></p>
+						<p><a href="#!" class="text-reset"><i class="bi-gear me-3"></i>Servicios</a></p>
+						<p><a href="#!" class="text-reset"><i class="bi-envelope me-3"></i>Contacto</a></p>
+					</div>
 
+					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+						<h6 class="text-uppercase fw-bold mb-4">Contact Us</h6>
+						<p><i class="bi-pin-map me-3"></i><a href="https://goo.gl/maps/MfYaQTTrJt9gZuYv6">1431 Ponce de Leon, San Juan, PR</a></p>
+						<p><i class="bi-envelope me-3"></i><a href="mailto:info@ctspr.com">info@ctspr.com</a></p>
+						<p><i class="bi-phone me-3"></i><a href="7876205500">787-620-5500</a></p>
+						<p><i class="bi-printer me-3"></i>787-620-0698</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-               <!-- START THE FEATURETTES -->
+		<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2022 Copyright:
+			<a class="text-reset fw-bold" href="https://mdbootstrap.com/">CTSPR.com</a>
+		</div>
 
-               <hr class="featurette-divider">
+	</footer>
 
-               <div class="row featurette">
-                    <div class="col-md-7">
-                         <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span
-                                   class="text-muted">It’ll blow your mind.</span></h2>
-                         <p class="lead">Some great placeholder content for the first featurette here. Imagine some
-                              exciting prose here.</p>
-                    </div>
-                    <div class="col-md-5">
-                         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                              width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                              aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-                                   dy=".3em">500x500</text>
-                         </svg>
-
-                    </div>
-               </div>
-
-               <hr class="featurette-divider">
-
-               <div class="row featurette">
-                    <div class="col-md-7 order-md-2">
-                         <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span
-                                   class="text-muted">See for yourself.</span></h2>
-                         <p class="lead">Another featurette? Of course. More placeholder content here to give you an
-                              idea of how this layout would work with some actual real-world content in place.</p>
-                    </div>
-                    <div class="col-md-5 order-md-1">
-                         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                              width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                              aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-                                   dy=".3em">500x500</text>
-                         </svg>
-
-                    </div>
-               </div>
-
-               <hr class="featurette-divider">
-
-               <div class="row featurette">
-                    <div class="col-md-7">
-                         <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
-                                   class="text-muted">Checkmate.</span></h2>
-                         <p class="lead">And yes, this is the last block of representative placeholder content. Again,
-                              not really intended to be actually read, simply here to give you a better view of what
-                              this would look like with some actual content. Your content.</p>
-                    </div>
-                    <div class="col-md-5">
-                         <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                              width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                              aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-                                   dy=".3em">500x500</text>
-                         </svg>
-
-                    </div>
-               </div>
-
-               <hr class="featurette-divider">
-
-               <!-- /END THE FEATURETTES -->
-
-          </div><!-- /.container -->
-
-
-          <!-- FOOTER -->
-          <footer class="container">
-               <p class="float-end"><a href="#">Back to top</a></p>
-               <p>© 2017–2022 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-          </footer>
-     </main>
-
-
-     <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-          crossorigin="anonymous"></script>
-
-
-
-
+	<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
 </body>
-<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 
 </html>
