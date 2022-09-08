@@ -139,6 +139,7 @@ a.active {
 }
 .accordion-body.employees h4 {
   color: var(--secondary);
+  font-weight: 400;
 }
 
 .accordion-body.clients i {
@@ -147,6 +148,7 @@ a.active {
 .accordion-body.clients h4 {
   color: var(--primary);
 }
+
 
 
 
@@ -177,6 +179,7 @@ a.active {
   #branches h5 {
     color: var(--primary) !important;
     font-size: 1.5rem;
+    font-weight: 400;
   }
 
 
@@ -355,6 +358,9 @@ img, figure {
 }
 p, .p {
   margin: 0 0 16px;
+}
+.card h3 {
+  font-weight: 400;
 }
 
 
