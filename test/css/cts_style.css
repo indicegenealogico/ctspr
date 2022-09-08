@@ -425,6 +425,7 @@ p, .p {
   display: inline-block;
   transition: ease-in-out 0.3s;
   color: #fff;
+  z-index: 1000;
 }
 
 .team .member .social a:hover {
