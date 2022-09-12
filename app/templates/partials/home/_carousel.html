@@ -1,0 +1,66 @@
+{% load static %}
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item" data-bs-interval="10000">
+      <picture>
+        <source srcset="{% static 'images/carousel/slide1/2000500.jpg' %}" media="(min-width: 1400px)">
+        <source srcset="{% static 'images/carousel/slide1/1400500.jpg' %}" media="(min-width: 769px)">
+        <source srcset="{% static 'images/carousel/slide1/800500.jpg' %}" media="(min-width: 577px)">
+        <img src="{% static 'images/carousel/slide1/600500.jpg' %}" alt="responsive image" class="d-block img-fluid">
+      </picture>
+
+      <!-- <div class="container"> -->
+      <div class="carousel-caption text-start">
+        <h1>Frase atractiva</h1>
+        <p>Sobre 35 años contribuyendo al crecimiento de las empresas en Puerto Rico…</p>
+        <!-- <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p> -->
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="carousel-item active" data-bs-interval="10000">
+      <picture>
+        <source srcset="{% static 'images/carousel/slide2/2000500.jpg' %}" media="(min-width: 1400px)">
+        <source srcset="{% static 'images/carousel/slide2/1400500.jpg' %}" media="(min-width: 769px)">
+        <source srcset="{% static 'images/carousel/slide2/800500.jpg' %}" media="(min-width: 577px)">
+        <img src="{% static 'images/carousel/slide2/600500.jpg' %}" alt="responsive image" class="d-block img-fluid">
+      </picture>
+
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Frase Atractiva</h1>
+          <p>Trayectoria estable y sólida en el reclutamiento de empleados temporeros…</p>
+          <!-- <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p> -->
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="10000">
+      <picture>
+        <source srcset="{% static 'images/carousel/slide3/2000500.jpg' %}" media="(min-width: 1400px)">
+        <source srcset="{% static 'images/carousel/slide3/1400500.jpg' %}" media="(min-width: 769px)">
+        <source srcset="{% static 'images/carousel/slide3/800500.jpg' %}" media="(min-width: 577px)">
+        <img src="{% static 'images/carousel/slide3/600500.jpg' %}" alt="responsive image" class="d-block img-fluid">
+      </picture>
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>Satisfacción garantizada</h1>
+          <p>Le brindamos a nuestros clientes el personal que se ajuste a sus necesidades.</p>
+          <!-- <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

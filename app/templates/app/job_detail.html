@@ -1,6 +1,13 @@
-<h1>Pueblos de Puerto Rico - DetailView</h1>
-<ul>
-  
-  <li>{{ object.name }} - {{ object.branch }}</li>
+<h1>Job Detail</h1>
 
+  <p>Job ID:     {{ job.jobID }}</p>
+  <p>Job Title:  {{ job.title }}</p>
+  <p>Pueblo:     {{ job.town }}</p>
+  <p>Reclutador: {{ job.recruiter }}</p>
+  <p>Sucursal:   {{ branch }}</p>
+  <p>Requisitos:</p>
+  <ul>
+  {% for req in reqs %}
+    <li>{{ req }}</li>
+  {% endfor %}
 </ul>

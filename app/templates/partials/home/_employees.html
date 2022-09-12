@@ -1,0 +1,32 @@
+{% load static %}
+
+<section id="employees" class="py-5">
+  <div class="container">
+    <div class="section-title">
+      <h3 class="featurette-heading fw-normal lh-1">Nuestros <span>Empleados</span></h3>
+      <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
+        atque vitae
+        autem.</p>
+    </div>
+    <img src="{% static 'images/empleado.jpg' %}" alt="" class="img-fluid">
+  </div>
+  <div class="divider container-fluid"></div>
+  <div class="container">
+    <div class="container">
+      <p class="lead">En esta sección nuestros empleados tendrán acceso a:</p><br>
+      <ul class="lead">
+        <li>Información biográfica (nombre, dirección, teléfono, etc.)</li>
+        <li>Histórico de pago por semana y sus deducciones</li>
+        <li>Acumulación histórica de pago al año corriente</li>
+      </ul>
+      <p class="lead">Si posee un Employee ID y Password, presiona el botón identificado como Login para
+        acceder a su cueta. De lo contrario, solicite un código de usuario y contraseña completando el formulario
+        de Solicitud de Acceso para empleados y envíelo a <a href="empleados@ctspr.com">empleados@ctspr.com</a></p>
+    </div>
+
+    <div class="btns d-grid gap-2 col-md-6 col-xl-4 mx-auto">
+      <a href="login.html" class="btn btn-primary btn-lg"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
+      <a href="#link" class="btn btn-primary btn-lg"><i class="bi bi-credit-card me-2"></i>Solicitar Credenciales</a>
+    </div>
+  </div>
+</section>

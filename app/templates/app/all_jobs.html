@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}CTSPR{% endblock %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
+  <link rel="stylesheet" type="text/css" href="extensions/filter-control/bootstrap-table-filter-control.css">
+  
+{% endblock %}
+
+{% block content %}
+  <div class="container jobs">
+    <h1>Oportunidades de Empleo</h1>
+
+    <table class="table" 
+      data-toggle="table"
+      data-search="true"
+      data-filter-control="true" 
+      data-show-export="true"
+      data-click-to-select="true"
+      id="table">
+      <thead>
+        <tr>
+          <th>Job ID</th>
+          <th scope="col" data-field="title" data-filter-control="input" data-sortable="true">Posición</th>
+          <th scope="col" data-field="town" data-filter-control="select" data-sortable="true">Pueblo</th>
+          <th scope="col" data-field="branch" data-filter-control="select" data-sortable="true">Sucursal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for job in jobs %}
+        <tr>
+          <td scope="row">{{ job.jobID }}</td>
+          <td>{{ job.title }}</td>
+          <td>{{ job.town }}</td>
+          <td>{{ job.suc }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    
+  </div>
+  
+{% endblock %}
+{% block scripts%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap-table.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/filter-control/bootstrap-table-filter-control.js"></script>
+{% endblock %}

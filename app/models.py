@@ -30,6 +30,8 @@ class Branch(models.Model):
   phone    = PhoneField(blank=True, help_text='Contact phone number')
   fax      = PhoneField(blank=True, help_text='Contact fax number')
   manager  = models.CharField(max_length=20, blank=False, null=False)
+  picture  = models.ImageField(upload_to='images/', blank=False, null=False)
+  maplink  = models.CharField(max_length=80, blank=True, null=True)
 
   class Meta:
     verbose_name_plural = 'Branches'
@@ -73,10 +75,10 @@ class Requirement(models.Model):
 
 #=================================================================================
 class Job(models.Model):
-  job_id       = models.IntegerField(primary_key = True)
+  jobID        = models.IntegerField(blank=True, null=True)
   title        = models.CharField(max_length=30, null=False, blank=False)
   description  = models.TextField(null=True, blank=True)
-  requirements = models.ManyToManyField(Requirement)
+  requirements = models.ManyToManyField(Requirement, blank=True)
   posting_date = models.DateField(help_text="Enter posting date", 
                                   validators=[no_pass], 
                                   blank=True,  null=True, 
@@ -92,5 +94,5 @@ class Job(models.Model):
   
 
   def __str__(self):
-    return ("%s - %s" % (self.job_id, self.title))
+    return ("%s - %s" % (self.jobID, self.title))
   

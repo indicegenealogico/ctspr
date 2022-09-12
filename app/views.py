@@ -1,8 +1,12 @@
+import http
 from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from .models import *
+
+from django.shortcuts import render
+
 
 # Create your views here.
 
@@ -10,11 +14,19 @@ from .models import *
 class HomeView(TemplateView):
   template_name = "home.html"
 
-  def get_context_data(self, **kwargs):
-    context =  super().get_context_data(**kwargs)
+  def get_context_data(self):
+    branches  = Branch.objects.all()
+    towns     = Town.objects.all()
+    context   = {'branches':branches, 'towns':towns}
     return context
 
 
+#=====================================================
+class ContactView(TemplateView):
+  template_name = "contact.html"
+
+  
+  
 #=====================================================
 class TownCreateView(CreateView):
   model = Town
@@ -37,6 +49,8 @@ class TownDeleteView(DeleteView):
   success_url = reverse_lazy('home')
 
 
+
+
 #=====================================================
 class JobCreateView(CreateView):
   model = Job
@@ -44,11 +58,18 @@ class JobCreateView(CreateView):
   success_url = reverse_lazy('home')
   
 
-class JobDetailView(DetailView):
-  model = Job
-  fields = ['job_id', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
-
+class JobDetailView(TemplateView):
+  template_name= 'app/job_detail.html'
   
+  def get_context_data(self, pk):
+    job     = Job.objects.get(id=pk)
+    reqs    = Requirement.objects.filter(job=job.id)
+    town    = Town.objects.get(id=job.town_id)
+    branch  = Branch.objects.get(id=town.branch_id)
+    context = {'branch':branch, 'job':job, 'reqs':reqs }
+    return context
+  
+
 class JobUpdateView(UpdateView):
   model = Job
   fields = ['job_id', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
@@ -57,3 +78,44 @@ class JobUpdateView(UpdateView):
 class JobDeleteView(DeleteView):
   model = Job
   success_url = reverse_lazy('home')
+  
+ 
+ 
+  
+
+#=====================================================
+def login(request):
+  return render(request, 'login.html', {})
+
+
+
+
+
+#=====================================================
+class BranchJobsView(TemplateView):
+  template_name = 'app/branch_jobs.html'
+  
+  def get_context_data(self, str="SA"):
+    branch = Branch.objects.get(name=str)
+    jobs   = Job.objects.raw('''SELECT app_branch.name AS suc, app_town.name AS pueblo, app_job.jobID, app_job.title, app_job.id 
+                              FROM app_branch INNER JOIN app_town ON app_branch.id = app_town.branch_id INNER JOIN app_job ON app_town.id = app_job.town_id
+                              WHERE app_branch.name = %s
+                              ORDER BY app_town.name, app_job.title ''', [str])
+    context = {'branch':branch, 'jobs':jobs}
+    return context
+
+
+
+
+
+#=====================================================
+class AllJobsView(TemplateView):
+  template_name = 'app/all_jobs.html'
+  
+  def get_context_data(self):
+    jobs   = Job.objects.raw('''SELECT app_branch.name AS suc, app_town.name AS pueblo, app_job.jobID, app_job.title, app_job.id 
+                              FROM app_branch INNER JOIN app_town ON app_branch.id = app_town.branch_id INNER JOIN app_job ON app_town.id = app_job.town_id
+                              ORDER BY app_town.name, app_job.title ''')
+    context = {'jobs':jobs}
+    return context
+

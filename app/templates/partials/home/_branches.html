@@ -1,0 +1,50 @@
+{% load static %}
+
+<section id="branches" class="section-bg pt-5">
+  <div class="container">
+    <div class="section-title">
+      <h3 class="featurette-heading fw-normal lh-1">Nuestras <span>Oficinas</span></h3>
+      <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
+        atque vitaeautem.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card">
+          <img src="media/images/lp.png" class="card-img-top" alt="Oficina Corporativa">
+          <div class="card-body">
+            <h5 class="card-title">Oficina Corporativa</h5>
+            <address>
+              <a href="https://goo.gl/maps/MfYaQTTrJt9gZuYv6" target="_blank">
+                1431 Ave. Ponce de León<br>
+                Suite 701, Santurce, PR-00901<br>
+              </a>
+              Tel.: <a href="7876205500">787-620-5500</a><br>
+              Fax.: 787-620-0698
+            </address>
+            <a href="#" class="btn btn-primary">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+      {% for branch in branches %}
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card">
+          <img src="media/{{ branch.picture }}" class="card-img-top" alt="oficina {{ branch.get_name_display }}">
+          <div class="card-body">
+            <h5 class="card-title">Sucursal {{ branch.get_name_display }}</h5>
+            <address>
+              <a href="https://goo.gl/maps/{{ branch.maplink }}" target="_blank">
+                {{ branch.address1}}<br>
+                {{ branch.address2}}, {{ branch.city}}, {{ branch.state}}-{{ branch.zip_code}}<br>
+              </a>
+              Tel.: <a href="{{ branch.phone }}">{{ branch.phone }}</a><br>
+              Fax.: {{ branch.fax }}
+            </address>
+            <a href="/jobs/{{ branch.name }}/ofertas" class="btn btn-primary">Ver Ofertas de Empleo</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

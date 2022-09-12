@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}My amazing blog{% endblock %}
+{% block title %}Inicio | CTSPR{% endblock %}
 
 {% block content %}
-<h1>Content Here</h1>
+
+  {% include 'partials/home/_carousel.html' %}
+  {% include 'partials/home/_whycts.html' %}
+  <div class="hr"></div>
+  {% include 'partials/home/_branches.html' %}
+  <div class="hr"></div>
+  {% include 'partials/home/_employees.html' %}
+  {% include 'partials/home/_ofertas.html' %}
+  {% include 'partials/home/_services.html' %}
+  <div class="hr"></div>
+  {% include 'partials/home/_team.html' %}
+
 {% endblock %}
