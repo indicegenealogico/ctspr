@@ -44,22 +44,17 @@
         headerSortTristate:true,
         columns:[
           { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55},
-          {title:"Posición", field:"title", headerFilter:"input", headerFilterParams:{valuesLookup:true, clearable:true}},
+          {title:"Posición", field:"title", headerFilter:"input", headerFilterParams:{valuesLookup:true, clearable:true},
+            cellClick:function(e, cell){
+              window.open({% url 'login' %});
+            }
+          },
           {title:"Pueblo"  , field:"town" , headerFilter:"list", maxWidth:160, headerFilterParams:{valuesLookup:true, clearable:true}},
           {title:"Sucursal", field:"suc"  , headerFilter:"list", maxWidth:130, hozAlign:"center", headerFilterParams:{valuesLookup:true, clearable:true}},
-          {title:"Job ID", field:"jobid", hozAlign:"center", maxWidth:130,
-            cellClick:function(e, cell){
-              console.log('hola');
-              window.open({% url 'login' %})
-            }
-          }
+          {title:"Job ID", field:"jobid", hozAlign:"center", maxWidth:130}
         ]
         });
    
-            
-      
-      
-
     </script>
   </div>
   
