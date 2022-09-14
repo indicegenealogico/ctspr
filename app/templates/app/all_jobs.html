@@ -1,37 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block title %}CTSPR{% endblock %}
+
 {% block head %}
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.css">
-  <link rel="stylesheet" type="text/css" href="extensions/filter-control/bootstrap-table-filter-control.css">
-  
+  {% include 'partials/_head_table.html'%}
 {% endblock %}
 
 {% block content %}
   <div class="container jobs">
     <h1>Oportunidades de Empleo</h1>
 
-    <table class="table" 
-      data-toggle="table"
-      data-search="true"
-      data-filter-control="true" 
-      data-show-export="true"
-      data-click-to-select="true"
-      id="table">
+    <table class="table-striped table-hover table-sm" id="table">
       <thead>
         <tr>
           <th>Job ID</th>
-          <th scope="col" data-field="title" data-filter-control="input" data-sortable="true">Posición</th>
-          <th scope="col" data-field="town" data-filter-control="select" data-sortable="true">Pueblo</th>
-          <th scope="col" data-field="branch" data-filter-control="select" data-sortable="true">Sucursal</th>
+          <th scope="col" data-field="title">Posición</th>
+          <th scope="col" data-field="town">Pueblo</th>
+          <th scope="col" data-field="branch">Sucursal</th>
         </tr>
       </thead>
       <tbody>
         {% for job in jobs %}
         <tr>
-          <td scope="row">{{ job.jobID }}</td>
+          <td>{{ job.jobID }}</td>
           <td>{{ job.title }}</td>
           <td>{{ job.town }}</td>
           <td>{{ job.suc }}</td>
@@ -39,12 +31,34 @@
         {% endfor %}
       </tbody>
     </table>
-    
+    <script>
+      var table = new Tabulator("#table", {
+        height:"70vh",
+        layout:"fitColumns",
+        responsiveLayout:true,
+        pagination:"local",
+        paginationSize:10,
+        paginationSizeSelector:[20, 40, 60, 100],
+        movableColumns:true,
+        paginationCounter:"rows",
+        headerSortTristate:true,
+        columns:[
+          { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55},
+          {title:"Posición", field:"title", headerFilter:"input", headerFilterParams:{valuesLookup:true, clearable:true},
+            cellClick:function(e, cell){
+              window.open({% url 'login' %});
+            }
+          },
+          {title:"Pueblo"  , field:"town" , headerFilter:"list", maxWidth:160, headerFilterParams:{valuesLookup:true, clearable:true}},
+          {title:"Sucursal", field:"suc"  , headerFilter:"list", maxWidth:130, hozAlign:"center", headerFilterParams:{valuesLookup:true, clearable:true}},
+          {title:"Job ID", field:"jobid", hozAlign:"center", maxWidth:130}
+        ]
+        });
+   
+    </script>
   </div>
   
 {% endblock %}
-{% block scripts%}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="{% static 'js/bootstrap-table.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.1/extensions/filter-control/bootstrap-table-filter-control.js"></script>
+{% block scripts %}
+
 {% endblock %}
