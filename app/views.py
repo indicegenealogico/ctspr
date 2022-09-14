@@ -4,6 +4,8 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from .models import *
+import datetime 
+
 
 from django.shortcuts import render
 
@@ -16,7 +18,13 @@ class HomeView(TemplateView):
 
   def get_context_data(self):
     branches  = Branch.objects.all()
-    towns     = Town.objects.all()
+    # towns     = Town.objects.all()
+
+    towns = Town.objects.raw(''' SELECT app_branch.id, app_town.name
+                                  FROM (app_town INNER JOIN app_job ON app_town.id = app_job.town_id) INNER JOIN app_branch ON app_town.branch_id = app_branch.id
+                                  GROUP BY app_branch.id, app_town.name
+                            ''')
+    print(towns)
     context   = {'branches':branches, 'towns':towns}
     return context
 
