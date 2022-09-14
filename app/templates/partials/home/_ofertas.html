@@ -9,17 +9,18 @@
           sucursales</p>
       </div>
       <div class="col-lg-7">
-        <h3 class="fw-normal lh-1">Ver ofertas de empleo por pueblo</h3>
-        <select class="form-select" aria-label="Seleccione algo">
+        <h3 class="fw-normal lh-1">Ofertas de Empleo</h3>
+        <!-- <select class="form-select" aria-label="Seleccione algo">
           <option value="municipio" class="">Seleccione su pueblo</option>
           {% for town in towns %}
-            <option value="{{ town.branch_id }}"> {{ town.name }}</option>
+          <option value="{{ town.branch_id }}"> {{ town.name }}</option>
           {% endfor %}
-        </select>
+        </select> -->
         <p class="lead second">Antes de pasar a la solicitud de empleo, debe anotar el número de
           referencia de la posición a la cual interesa aplicar para que lo anote en el espacio 
           provisto en la solicitud.
         </p>
+        <a type="button" href="{% url 'ofertas' %}" class="btn btn-lg call-to-action">Ver las Ofertas de Empleo</a>
       </div>
     </div>
   </div>

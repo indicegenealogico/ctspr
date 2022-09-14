@@ -500,3 +500,11 @@ footer {
 /*--------------------------------------------------------------
 # Table
 --------------------------------------------------------------*/
+.call-to-action {
+    color: #f6f6f6;
+    background-color: rgba(237, 28, 143, .6);
+    border-color: white;
+}
+.call-to-action:hover{
+  background-color: rgba(237, 28, 143, 1);
+}
