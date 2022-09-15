@@ -103,12 +103,12 @@ def login(request):
 class BranchJobsView(TemplateView):
   template_name = 'app/branch_jobs.html'
   
-  def get_context_data(self, str="SA"):
-    branch = Branch.objects.get(name=str)
+  def get_context_data(self, branch_code="SA"):
+    branch = Branch.objects.get(name=branch_code)
     jobs   = Job.objects.raw('''SELECT app_branch.name AS suc, app_town.name AS pueblo, app_job.jobID, app_job.title, app_job.id 
                               FROM app_branch INNER JOIN app_town ON app_branch.id = app_town.branch_id INNER JOIN app_job ON app_town.id = app_job.town_id
                               WHERE app_branch.name = %s
-                              ORDER BY app_town.name, app_job.title ''', [str])
+                              ORDER BY app_town.name, app_job.title ''', [branch_code])
     context = {'branch':branch, 'jobs':jobs}
     return context
 
