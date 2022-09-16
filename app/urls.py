@@ -21,7 +21,7 @@ urlpatterns = [
     path('job/<int:pk>/update' , JobUpdateView.as_view(), name='job_update'),
     path('job/<int:pk>/delete' , JobDeleteView.as_view(), name='job_delete'),
     
-    path('jobs/<str:branch_code>/ofertas/'  , BranchJobsView.as_view(), name='branch_jobs'),
+    path('jobs/<str:branch_code>/'  , BranchJobsView.as_view(), name='branch_jobs'),
     path('jobs/ofertas'        , AllJobsView.as_view()   , name='ofertas'),
 
 ]

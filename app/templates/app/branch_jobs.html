@@ -10,8 +10,15 @@
 {% block content %}
   <div class="container jobs">
     <h1>Oportunidades de Empleo</h1>
-    <h2>Sucursal de {{ branch }}</h2>
-    <p>tel: {{ branch.phone }}</p>
+    <div class="row">
+      <div class="col-md-5">
+        <h2>Sucursal de {{ branch }}</h2>
+        <p>tel: {{ branch.phone }}</p>
+      </div>
+      <div class="col-md-7">
+        mapa
+      </div>
+    </div>
 
 
     <table class="table-striped table-hover table-sm" id="table">
