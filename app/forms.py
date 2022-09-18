@@ -6,7 +6,7 @@ from . models import *
 
 
 #==============================
-class TownForm(ModelForm):
+class TownForm(forms.ModelForm):
   class Meta:
     model = Town    
     fields = ('name', 'branch')    
@@ -22,14 +22,14 @@ class TownForm(ModelForm):
 
 
 #==============================
-class RecruiterForm(ModelForm):
+class RecruiterForm(forms.ModelForm):
   class Meta:
     model  = Recruiter
     fields = "__all__"
     
     
 #==============================
-class JobForm(ModelForm):
+class JobForm(forms.ModelForm):
   closing_date   = forms.DateField(
         widget=forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker'}),
         input_formats=('%m/%d/%Y', )
@@ -44,9 +44,17 @@ class JobForm(ModelForm):
     fields       = '__all__'
     exclude      = ('created_date',)
     
-  def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['recruiter'].queryset = Recruiter.objects.none()
+    widgets = {
+      'jobID':        forms.TextInput(attrs={'class':'form-control'}),
+      'title':        forms.TextInput(attrs={'class':'form-control'}),
+      # 'description':  forms.TextInput(attrs={'class':'form-control'}),
+      # 'requirements': forms.MultipleChoiceField(),
+      'post_date':    forms.DateField(),
+      'closing_date': forms.DateField(),
+      # 'town':         forms.ComboField(),
+      # 'recruiter':   forms.ComboField()
+    }
+    
     
 
 
