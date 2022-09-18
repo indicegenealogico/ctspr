@@ -1,17 +1,16 @@
-import http
 from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from .models import *
-import datetime 
+from .forms import *
+
 
 
 from django.shortcuts import render
 
 
 # Create your views here.
-
 #=====================================================
 class HomeView(TemplateView):
   template_name = "home.html"
@@ -20,11 +19,11 @@ class HomeView(TemplateView):
     branches  = Branch.objects.all()
     # towns     = Town.objects.all()
 
-    towns = Town.objects.raw(''' SELECT app_branch.id, app_town.name
-                                  FROM (app_town INNER JOIN app_job ON app_town.id = app_job.town_id) INNER JOIN app_branch ON app_town.branch_id = app_branch.id
+    towns = Town.objects.raw(''' SELECT app_branch.id, app_branch.name AS br, app_town.name AS tw
+                                  FROM (app_town INNER JOIN app_job ON app_town.id = app_job.town_id) 
+                                  INNER JOIN app_branch ON app_town.branch_id = app_branch.id
                                   GROUP BY app_branch.id, app_town.name
                             ''')
-    print(towns)
     context   = {'branches':branches, 'towns':towns}
     return context
 
@@ -58,11 +57,11 @@ class TownDeleteView(DeleteView):
 
 
 
-
 #=====================================================
 class JobCreateView(CreateView):
   model = Job
-  fields = ['job_id', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
+  form_class = JobForm
+  # fields = ['jobID', 'title', 'description', 'requirements', 'posting_date','closing_date', 'town', 'recruiter']
   success_url = reverse_lazy('home')
   
 
@@ -87,8 +86,7 @@ class JobDeleteView(DeleteView):
   model = Job
   success_url = reverse_lazy('home')
   
- 
- 
+
   
 
 #=====================================================
@@ -97,22 +95,18 @@ def login(request):
 
 
 
-
-
 #=====================================================
 class BranchJobsView(TemplateView):
   template_name = 'app/branch_jobs.html'
   
-  def get_context_data(self, str="SA"):
-    branch = Branch.objects.get(name=str)
+  def get_context_data(self, branch_code="SA"):
+    branch = Branch.objects.get(name=branch_code)
     jobs   = Job.objects.raw('''SELECT app_branch.name AS suc, app_town.name AS pueblo, app_job.jobID, app_job.title, app_job.id 
                               FROM app_branch INNER JOIN app_town ON app_branch.id = app_town.branch_id INNER JOIN app_job ON app_town.id = app_job.town_id
                               WHERE app_branch.name = %s
-                              ORDER BY app_town.name, app_job.title ''', [str])
+                              ORDER BY app_town.name, app_job.title ''', [branch_code])
     context = {'branch':branch, 'jobs':jobs}
     return context
-
-
 
 
 
@@ -127,3 +121,16 @@ class AllJobsView(TemplateView):
     context = {'jobs':jobs}
     return context
 
+
+#=====================================================
+class TownJobsView(TemplateView):
+  template_name = 'app/town_jobs.html'
+  
+  def get_context_data(self, branch_code='', city=''):
+    branch = Branch.objects.get(name=branch_code)
+    jobs   = Job.objects.raw('''SELECT app_branch.name AS suc, app_town.name AS pueblo, app_job.jobID, app_job.title, app_job.id 
+                              FROM app_branch INNER JOIN app_town ON app_branch.id = app_town.branch_id INNER JOIN app_job ON app_town.id = app_job.town_id
+                              WHERE app_town.name = %s
+                              ORDER BY app_town.name, app_job.title ''', [city])
+    context = {'branch':branch, 'jobs':jobs, 'city':city}
+    return context

@@ -8,10 +8,8 @@ from . models import *
 #==============================
 class TownForm(ModelForm):
   class Meta:
-    model = Town
-    
-    fields = ('name', 'branch')
-    
+    model = Town    
+    fields = ('name', 'branch')    
     labels = {
       # 'name': '',
       # 'branch': ''
@@ -45,6 +43,10 @@ class JobForm(ModelForm):
     model        = Job
     fields       = '__all__'
     exclude      = ('created_date',)
+    
+  def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['recruiter'].queryset = Recruiter.objects.none()
     
 
 

@@ -16,13 +16,14 @@ urlpatterns = [
     path('town/<int:pk>/update', TownUpdateView.as_view(), name='town_update'),
     path('town/<int:pk>/delete', TownDeleteView.as_view(), name='town_delete'),
     
-    path('job/add'             , JobCreateView.as_view(), name='job_add'),
-    path('job/<int:pk>/detail' , JobDetailView.as_view(), name='job_detail'),
-    path('job/<int:pk>/update' , JobUpdateView.as_view(), name='job_update'),
-    path('job/<int:pk>/delete' , JobDeleteView.as_view(), name='job_delete'),
+    path('job/add'             , JobCreateView.as_view() , name='job_add'),
+    path('job/<int:pk>/detail' , JobDetailView.as_view() , name='job_detail'),
+    path('job/<int:pk>/update' , JobUpdateView.as_view() , name='job_update'),
+    path('job/<int:pk>/delete' , JobDeleteView.as_view() , name='job_delete'),
     
-    path('jobs/<str>/ofertas/'  , BranchJobsView.as_view(), name='branch_jobs'),
-    path('jobs/ofertas'        , AllJobsView.as_view()   , name='ofertas'),
+    path('jobs/ofertas'                     , AllJobsView.as_view()   , name='ofertas'),
+    path('jobs/<str:branch_code>/'          , BranchJobsView.as_view(), name='branch_jobs'),
+    path('jobs/<str:branch_code>/<str:city>', TownJobsView.as_view()  , name='town_jobs'),   
 
 ]
 

@@ -4,16 +4,18 @@
   <div class="container">
     <div class="row pt-5 pb-5">
       <div class="col-lg-5">
-        <h3 class="fw-normal lh-2">Encuantra tu futuro aquí</h3>
+        <h3 class="fw-normal lh-2">Encuentra tu futuro aquí</h3>
         <p class="lead">Busca ofertas de empleos disponibles por región en cada una de nuestras cinco
           sucursales</p>
       </div>
       <div class="col-lg-7">
         <h3 class="fw-normal lh-1">Ofertas de Empleo</h3>
-        <select class="form-select" aria-label="Seleccione algo">
+        <select class="form-select" aria-label="Seleccione algo" onchange="go(this)">
           <option value="municipio" class="">Seleccione su pueblo</option>
           {% for town in towns %}
-          <option value="{{ town.branch_id }}"> {{ town.name }}</option>
+          <!-- <optgroup label="Sucursal {{ town.branch }}"> -->
+            <option value="{{ town.br }}"> {{ town.tw }}</option>
+          <!-- </optgroup> -->
           {% endfor %}
         </select>
         <p class="lead second">Antes de pasar a la solicitud de empleo, debe anotar el número de
@@ -24,4 +26,10 @@
       </div>
     </div>
   </div>
+  <script>
+    function go(sel) {
+      var url = "jobs/"+sel.value+"/"+sel.options[sel.selectedIndex].text
+      window.open(url)
+    }
+  </script>
 </section>

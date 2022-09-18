@@ -33,27 +33,25 @@
     </table>
     <script>
       var table = new Tabulator("#table", {
-        height:"70vh",
+        height:"60vh",
         layout:"fitColumns",
         responsiveLayout:true,
         pagination:"local",
-        paginationSize:10,
-        paginationSizeSelector:[20, 40, 60, 100],
+        paginationSize:30,
+        paginationSizeSelector:[40, 60, 100, true],
         movableColumns:true,
         paginationCounter:"rows",
         headerSortTristate:true,
         columns:[
           { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55},
           {title:"Posición", field:"title", headerFilter:"input", headerFilterParams:{valuesLookup:true, clearable:true},
-            cellClick:function(e, cell){
-              window.open({% url 'login' %});
-            }
+            cellClick:function(e, cell){window.open({% url 'login' %})}
           },
           {title:"Pueblo"  , field:"town" , headerFilter:"list", maxWidth:160, headerFilterParams:{valuesLookup:true, clearable:true}},
           {title:"Sucursal", field:"suc"  , headerFilter:"list", maxWidth:130, hozAlign:"center", headerFilterParams:{valuesLookup:true, clearable:true}},
           {title:"Job ID", field:"jobid", hozAlign:"center", maxWidth:130}
         ]
-        });
+        })
    
     </script>
   </div>

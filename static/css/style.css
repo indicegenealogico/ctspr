@@ -17,6 +17,10 @@ body {
   color: #5a5a5a;
   }
 
+  h1, h2, h3, h4 {
+    font-family: Poppins;
+  }
+
 .btn {
   background-color: var(--secondary);
 }
@@ -132,24 +136,22 @@ a.active {
 }
 .accordion-body i {
   font-size: 1.5rem;
-
-}
-.accordion-body.employees i {
-  color: var(--primary);
-}
-.accordion-body.employees h4 {
-  color: var(--secondary);
-  font-weight: 400;
 }
 
-.accordion-body.clients i {
-  color: var(--secondary);
+.accordion-body h4{
+  font-weight: 300;
+  font-size: 1.3rem;
 }
+
+.accordion-body.employees i,
 .accordion-body.clients h4 {
   color: var(--primary);
-  font-weight: 400;
 }
 
+.accordion-body.clients i,
+.accordion-body.employees h4 {
+  color: var(--secondary);
+}
 
 
 
@@ -507,4 +509,30 @@ footer {
 }
 .call-to-action:hover{
   background-color: rgba(237, 28, 143, 1);
+}
+
+.container.jobs h1 {
+  color: var(--primary);
+  font-weight: 300;
+}
+.container.jobs h2 {
+  color: var(--secondary);
+  font-weight: 300;
+  margin-top: 3rem;
+}
+#table.tabulator {
+  margin-top: 2.5rem;
+}
+.tabulator-col-title {
+  color: var(--primary)
+}
+
+
+
+
+
+
+.branch-map {
+    padding: 30px 20px;
+    box-shadow: 0px 21px 35px;
 }
