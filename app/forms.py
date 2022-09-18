@@ -30,14 +30,7 @@ class RecruiterForm(forms.ModelForm):
     
 #==============================
 class JobForm(forms.ModelForm):
-  closing_date   = forms.DateField(
-        widget=forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker'}),
-        input_formats=('%m/%d/%Y', )
-        )
-  posting_date   = forms.DateField(
-        widget=forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker'}),
-        input_formats=('%m/%d/%Y', )
-        )
+  
 
   class Meta:
     model        = Job
@@ -45,14 +38,14 @@ class JobForm(forms.ModelForm):
     exclude      = ('created_date',)
     
     widgets = {
-      'jobID':        forms.TextInput(attrs={'class':'form-control'}),
-      'title':        forms.TextInput(attrs={'class':'form-control'}),
-      # 'description':  forms.TextInput(attrs={'class':'form-control'}),
-      # 'requirements': forms.MultipleChoiceField(),
-      'post_date':    forms.DateField(),
-      'closing_date': forms.DateField(),
-      # 'town':         forms.ComboField(),
-      # 'recruiter':   forms.ComboField()
+      'jobID'       : forms.TextInput(attrs={'class':'form-control'}),
+      'title'       : forms.TextInput(attrs={'class':'form-control'}),
+      # 'description' : forms.TextInput(attrs={'class':'form-control'}),
+      # 'requirements': forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple),
+      'posting_date': forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker form-control'}),      
+      'closing_date': forms.DateInput(format='%m/%d/%Y', attrs={'class': 'datepicker form-control'}),
+      # 'town'        : forms.ComboField(),
+      # 'recruiter'   :   forms.ComboField()
     }
     
     
