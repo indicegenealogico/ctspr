@@ -37,7 +37,7 @@ class ContactView(TemplateView):
 #=====================================================
 class TownCreateView(CreateView):
   model = Town
-  fields =['name', 'branch']
+  form_class = TownForm
   success_url = reverse_lazy('home')
 
 

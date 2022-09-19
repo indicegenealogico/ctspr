@@ -528,7 +528,9 @@ footer {
 }
 
 
-
+.container.add_job h1, .container.add_town h1{
+  margin-top: 5rem ;
+}
 
 
 

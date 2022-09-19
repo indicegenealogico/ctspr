@@ -1,19 +1,28 @@
 {% extends "base.html" %}
 
-
+{% block head %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+{% endblock %}
+  
 {% block content %}
-<div class="container">
+<div class="container add_job">
+  <h1>Add Job</h1>
+  <div class="form-group">
+    <form action="" method="POST">
+      {% csrf_token %}
 
-<h1>Add Job</h1>
-<div class="form-group">
-  <form action="" method="POST">
-    {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Add Job" class="btn btn-secondary">
 
-    {{ form.as_p }}
-    <input type="submit" value="Add Job" class="btn btn-secondary">
-
-  </form>
+    </form>
+  </div>
 </div>
-</div>
+
+<script>
+  $(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
 
 {% endblock %}

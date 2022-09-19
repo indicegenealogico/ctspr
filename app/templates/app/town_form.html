@@ -1,16 +1,24 @@
-<h1>Add Town</h1>
+{% extends "base.html" %}
 
-{% if submitted %}
-  Your Town was added succefully
+{% block head %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+{% endblock %}
+  
+{% block content %}
+<div class="container add_town">
+  <h1>Add Town</h1>
 
-{% else %}
+  {% if submitted %}
+    Your Town was added succefully
+  {% else %}
+    <form action="" method="POST">
+      {% csrf_token %}
 
-  <form action="" method="POST">
-    {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" class="btn btn-secondary">
+    </form>
+  {% endif %}
+</div>
 
-    {{ form.as_p }}
-    <input type="submit" value="Submit" class="btn btn-secondary">
-
-  </form>
-
-{% endif %}
+{% endblock %}
