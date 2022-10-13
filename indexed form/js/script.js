@@ -50,8 +50,26 @@ request.onsuccess = function(e) {
       data.onsuccess = function() {
         user = data.result;
         //Muestra el formulario lleno si existe data
-        document.getElementById('nombre').value = user.nombre;
-        document.getElementById('inicial').value = user.inicial;
+        document.getElementById('nombre').value             = user.nombre;
+        document.getElementById('inicial').value            = user.inicial;
+        document.getElementById('apellidos').value          = user.apellidos;
+        document.getElementById('seguroSocial').value       = user.seguroSocial;
+        document.getElementById('email').value              = user.email;
+        document.getElementById('direccionFisica1').value   = user.direccionFisica1;
+        document.getElementById('direccionFisica2').value   = user.direccionFisica2;
+        document.getElementById('ciudadFisica').value       = user.ciudadFisica;
+        document.getElementById('estadoFisico').value       = user.estadoFisico;
+        document.getElementById('zipcodeFisico').value      = user.zipcodeFisico;
+        document.getElementById('fisicaCorreo').value       = user.fisicaCorreo;
+        document.getElementById('direccionCorreo1').value   = user.direccionCorreo1;
+        document.getElementById('direccionCorreo2').value   = user.direccionCorreo2;
+        document.getElementById('estadoCorreo').value       = user.estadoCorreo;
+        document.getElementById('zipcodeCorreo').value      = user.zipcodeCorreo;
+        document.getElementById('contactoEmergencia').value = user.contactoEmergencia;
+        document.getElementById('parentesco').value         = user.parentesco;
+        //document.getElementById('xx').value = user.xx;
+        //document.getElementById('xx').value = user.xx;
+
 
         
         console.table(user);

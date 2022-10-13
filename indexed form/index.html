@@ -51,7 +51,7 @@
             </div>
             <div class="col-md-3">
               <label for="phone" class="form-label">Teléfono</label><span class="req">*</span>
-              <input id="phone" type="tel" class="form-control" pattern="^\d{10}$" required>
+              <input type="tel" class="form-control" id="phone" name="phone" pattern="^\d{10}$" required>
             </div>
           </div>
         </fieldset>
@@ -85,7 +85,7 @@
             <input type="text" class="form-control" id="zipcodeFisico" name="zipcodeFisico" required>
           </div>
           <div class="form-check mb-2">
-            <input type="checkbox" class="form-check-input" id="fisicaCorreo" value="1">
+            <input type="checkbox" class="form-check-input" id="fisicaCorreo" name="fisicaCorreo" value="1">
             <label class="form-check-label" for="fisicaCorreo">Mi direccion fisica es diferente a mi direccion
               postal</label>
             </div>
@@ -97,11 +97,11 @@
           <div class="row g-3">            
             <div class="col-md-6">
               <label for="direccionCorreo1" class="form-label">Dirección</label><span class="req">*</span>
-              <input type="text" class="form-control" id="direccionCorreo1" placeholder="1234 Main St">
+              <input type="text" class="form-control" id="direccionCorreo1" name="direccionCorreo1" placeholder="1234 Main St">
             </div>
             <div class="col-md-6">
               <label for="direccionCorreo2" class="form-label">Dirección 2</label>
-              <input type="text" class="form-control" id="direccionCorreo2" placeholder="Apartment, studio, or floor">
+              <input type="text" class="form-control" id="direccionCorreo2" name="direccionCorreo2" placeholder="Apartment, studio, or floor">
             </div>
             <div class="col-4">
               <label for="ciudadCorreo" class="form-label">Ciudad</label><span class="req">*</span>
@@ -112,7 +112,7 @@
             </div>
             <div class="col-5">
               <label for="estadoCorreo" class="form-label">Estado</label><span class="req">*</span>
-              <input type="text" class="form-control" id="estadoCorreo" value="PR" name="estadoCorreo">
+              <input type="text" class="form-control" id="estadoCorreo" name="estadoCorreo" value="PR">
             </div>
             
             <div class="col-3">
@@ -147,12 +147,12 @@
             <p>En caso de emergencia, autorizo a contactar a:</p>
 
             <div class="col-md-6">
-              <label for="nombres" class="form-label">Nombre y Apellido</label><span class="req">*</span>
-              <input type="text" class="form-control" id="nombres" required>
+              <label for="contactoEmergencia" class="form-label">Nombre y Apellido</label><span class="req">*</span>
+              <input type="text" class="form-control" id="contactoEmergencia" name="contactoEmergencia" required>
             </div>
             <div class="col-md-3">
               <label for="parentesco" class="form-label">Parentesco</label><span class="req">*</span>
-              <input type="text" class="form-control" id="parentesco" required>
+              <input type="text" class="form-control" id="parentesco" name="parentesco" required>
             </div>
             <div class="col-md-3">
               <label for="phone" class="form-label">Teléfono</label><span class="req">*</span>
