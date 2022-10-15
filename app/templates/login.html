@@ -1,4 +1,4 @@
-
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -73,7 +73,7 @@
 
   <body class="text-center">
     <form class="form-signin" method="POST" action="/osasweb/owmenupa.exe">
-      <object data="/img/logo_cts.png" type="">
+      <object data="{% static 'images/logo_cts.png' %}" type="">
         <img class="mb-4" src="https://osaswebsrv.ctspr.com/image/logo_cts.png" alt="" height="72">
       </object>
       <h1 class="h3 mb-3 font-weight-normal">Bienvenido!</h1>
