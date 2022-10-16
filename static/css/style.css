@@ -125,6 +125,9 @@ a.active {
 #myCarousel {
   margin-top: 45px;
 }
+.navbar-toggler {
+  border: none !important;
+}
 
 
 
@@ -538,3 +541,5 @@ footer {
     padding: 30px 20px;
     box-shadow: 0px 21px 35px;
 }
+
+

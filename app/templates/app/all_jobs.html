@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}CTSPR{% endblock %}
+{% block title %}CTSPR | Ofertas de Empleo{% endblock %}
 
 {% block head %}
   {% include 'partials/_head_table.html'%}
@@ -9,7 +9,7 @@
 
 {% block content %}
   <div class="container jobs">
-    <h1>Ofertas de Empleo</h1>
+    <h1>Todas las Ofertas de Empleo</h1>
 
     <table class="table-striped table-hover table-sm" id="table">
       <thead>
@@ -24,7 +24,7 @@
         {% for job in jobs %}
         <tr>
           <td>{{ job.jobID }}</td>
-          <td>{{ job.title }}</td>
+          <td>{{ job.title|safe }}</td>
           <td>{{ job.town }}</td>
           <td>{{ job.suc }}</td>
         </tr>
@@ -33,22 +33,24 @@
     </table>
     <script>
       var table = new Tabulator("#table", {
+        locale:true,
         height:"60vh",
         layout:"fitColumns",
         responsiveLayout:true,
         pagination:"local",
-        paginationSize:30,
+        paginationSize:20,
         paginationSizeSelector:[40, 60, 100, true],
         movableColumns:true,
         paginationCounter:"rows",
         headerSortTristate:true,
+        headerSortClickElement:"icon",
         columns:[
           { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55},
-          {title:"Posición", field:"title", headerFilter:"input", headerFilterParams:{valuesLookup:true, clearable:true},
+          {title:"Posición", field:"title", headerFilterPlaceholder:"Filtrar...", headerFilter:"input", headerFilterParams:{valuesLookup:true, clearable:true},
             cellClick:function(e, cell){window.open({% url 'login' %}, 'Algo', 'popup')}
           },
-          {title:"Pueblo"  , field:"town" , headerFilter:"list", maxWidth:160, headerFilterParams:{valuesLookup:true, clearable:true}},
-          {title:"Sucursal", field:"suc"  , headerFilter:"list", maxWidth:130, hozAlign:"center", headerFilterParams:{valuesLookup:true, clearable:true}},
+          {title:"Pueblo"  , field:"town" , headerFilter:"list", maxWidth:160, headerFilterPlaceholder:"Filtrar...", headerFilterParams:{valuesLookup:true, clearable:true}},
+          {title:"Sucursal", field:"suc", headerFilterPlaceholder:"Filtrar...", headerFilter:"list", maxWidth:130, hozAlign:"center", headerFilterParams:{valuesLookup:true, clearable:true}},
           {title:"Job ID", field:"jobid", hozAlign:"center", maxWidth:130}
         ]
         })

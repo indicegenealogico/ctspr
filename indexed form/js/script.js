@@ -50,31 +50,41 @@ request.onsuccess = function(e) {
       data.onsuccess = function() {
         user = data.result;
         //Muestra el formulario lleno si existe data
+        //Datos Personales
         document.getElementById('nombre').value             = user.nombre;
         document.getElementById('inicial').value            = user.inicial;
         document.getElementById('apellidos').value          = user.apellidos;
         document.getElementById('seguroSocial').value       = user.seguroSocial;
         document.getElementById('email').value              = user.email;
+        document.getElementById('phone').value              = user.phone;
+        
+        // Direccion Fisica
         document.getElementById('direccionFisica1').value   = user.direccionFisica1;
         document.getElementById('direccionFisica2').value   = user.direccionFisica2;
         document.getElementById('ciudadFisica').value       = user.ciudadFisica;
         document.getElementById('estadoFisico').value       = user.estadoFisico;
         document.getElementById('zipcodeFisico').value      = user.zipcodeFisico;
+
         document.getElementById('fisicaCorreo').value       = user.fisicaCorreo;
+        
+        //Direccion de Correo
         document.getElementById('direccionCorreo1').value   = user.direccionCorreo1;
         document.getElementById('direccionCorreo2').value   = user.direccionCorreo2;
         document.getElementById('estadoCorreo').value       = user.estadoCorreo;
         document.getElementById('zipcodeCorreo').value      = user.zipcodeCorreo;
+        
+        //Informacion de Contacto
         document.getElementById('contactoEmergencia').value = user.contactoEmergencia;
         document.getElementById('parentesco').value         = user.parentesco;
-        //document.getElementById('xx').value = user.xx;
-        //document.getElementById('xx').value = user.xx;
+        //document.getElementById('telefonoContacto').value   = user.telefonoContacto;
 
 
+
+        document.getElementById('telefonoPatrono').value    = user.telefonoPatrono;
+        //document.getElementById('xx').value = user.xx;
         
         console.table(user);
-        console.log(user.nombre);
-        
+        console.log(user.nombre);        
       }
     } else { // key not exist
       console.log('Formulario vacio');
@@ -84,26 +94,6 @@ request.onsuccess = function(e) {
   form.addEventListener('submit', handleFormSubmit);
 
 };
-
-
-
-
-function insertCandidate(db, table) {
-
-  const txn   = db.transaction(DB_STORE_NAME, 'readwrite');
-  const store = txn.objectStore(DB_STORE_NAME);
-
-  let query   = store.put(table);
-
-  query.onsuccess = function (e) { 
-    console.log(e);
-    window.alert("Su data fue almacenada correctamente");
-    document.getElementById("contact-form").reset();
-  };
-  query.onerror   = function (e) { console.log(e.target.errorCode) };
-
-  txn.oncomplete  = function () { db.close() };
-}
 
 
 function handleFormSubmit(e) {
@@ -122,4 +112,27 @@ function handleFormSubmit(e) {
   
   // const results = document.querySelector('.results pre');
   // results.innerText = JSON.stringify(formJSON, null, 2);
+
+
+function insertCandidate(db, table) {
+
+  const txn   = db.transaction(DB_STORE_NAME, 'readwrite');
+  const store = txn.objectStore(DB_STORE_NAME);
+
+  let query   = store.put(table);
+
+  query.onsuccess = function (e) { 
+    console.log(e);
+    window.alert("Su data fue almacenada correctamente");
+    document.getElementById("contact-form").reset();
+  };
+
+  query.onerror   = function (e) {
+    console.log(e.target.errorCode)
+  };
+
+  txn.oncomplete  = function () {
+    db.close()
+  };
+}
 }

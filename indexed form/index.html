@@ -86,13 +86,13 @@
           </div>
           <div class="form-check mb-2">
             <input type="checkbox" class="form-check-input" id="fisicaCorreo" name="fisicaCorreo" value="1">
-            <label class="form-check-label" for="fisicaCorreo">Mi direccion fisica es diferente a mi direccion
+            <label class="form-check-label" for="fisicaCorreo">Mi direccion fisica es igual a mi direccion
               postal</label>
             </div>
         </fieldset>
 
           
-        <fieldset id="direccionCorreo" class="form-group border p-3 d-none">
+        <fieldset id="direccionCorreo" class="form-group border p-3">
           <legend class="w-auto">Dirección de Correo</legend>
           <div class="row g-3">            
             <div class="col-md-6">
@@ -103,19 +103,19 @@
               <label for="direccionCorreo2" class="form-label">Dirección 2</label>
               <input type="text" class="form-control" id="direccionCorreo2" name="direccionCorreo2" placeholder="Apartment, studio, or floor">
             </div>
-            <div class="col-4">
+            <div class="col-6">
               <label for="ciudadCorreo" class="form-label">Ciudad</label><span class="req">*</span>
               <select class="form-select" id="ciudadCorreo" name="ciudadCorreo">
                 <option selected disabled value="">Choose...</option>
                 <option>...</option>
               </select>
             </div>
-            <div class="col-5">
+            <div class="col-2">
               <label for="estadoCorreo" class="form-label">Estado</label><span class="req">*</span>
               <input type="text" class="form-control" id="estadoCorreo" name="estadoCorreo" value="PR">
             </div>
             
-            <div class="col-3">
+            <div class="col-4">
               <label for="physicalZipcode" class="form-label">Zip code</label><span class="req">*</span>
               <input type="text" class="form-control" id="zipCorreo" name="zipcodeCorreo">
             </div>
@@ -124,17 +124,17 @@
         <script>
           $('#fisicaCorreo').change(function () {
             if ($(this).is(":checked")) {
-              $('#direccionCorreo').removeClass("d-none");
-              $('#direccionCorreo1').attr('required', true);
-              $('#ciudadCorreo').attr('required', true);
-              $('#estadoCorreo').attr('required', true);
-              $('#zipCorreo').attr('required', true);                
-            } else {
               $('#direccionCorreo').addClass("d-none");
               $('#direccionCorreo1').attr('required', false);
               $('#ciudadCorreo').attr('required', false);
               $('#estadoCorreo').attr('required', false);
-              $('#zipCorreo').attr('required', false);
+              $('#zipCorreo').attr('required', false);                
+            } else {
+              $('#direccionCorreo').removeClass("d-none");
+              $('#direccionCorreo1').attr('required', true);
+              $('#ciudadCorreo').attr('required', true);
+              $('#estadoCorreo').attr('required', true);
+              $('#zipCorreo').attr('required', true);
               $('#direccionCorreo1').val() = $('#direccionFisica1').val();
             }
           });
@@ -155,8 +155,8 @@
               <input type="text" class="form-control" id="parentesco" name="parentesco" required>
             </div>
             <div class="col-md-3">
-              <label for="phone" class="form-label">Teléfono</label><span class="req">*</span>
-              <input type="tel" class="form-control" pattern="^\d{10}$" id="phone" name="phone"  required>
+              <label for="telefonoContacto" class="form-label">Teléfono</label><span class="req">*</span>
+              <input type="tel" class="form-control" pattern="^\d{10}$" id="telefonoContacto" name="telefonoContacto"  required>
             </div>
           </div>
         </fieldset>
