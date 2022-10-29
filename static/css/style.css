@@ -510,6 +510,7 @@ footer {
     background-color: rgba(237, 28, 143, .6);
     border-color: white;
 }
+
 .call-to-action:hover{
   background-color: rgba(237, 28, 143, 1);
 }
@@ -523,19 +524,18 @@ footer {
   font-weight: 300;
   margin-top: 3rem;
 }
+
 #table.tabulator {
   margin-top: 2.5rem;
 }
+
 .tabulator-col-title {
   color: var(--primary)
 }
 
-
 .container.add_job h1, .container.add_town h1{
   margin-top: 5rem ;
 }
-
-
 
 .branch-map {
     padding: 30px 20px;
@@ -543,3 +543,62 @@ footer {
 }
 
 
+/*--------------------------------------------------------------
+# Icons Bar
+--------------------------------------------------------------*/
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  z-index: 10000;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 991px) { 
+  .icon-bar {
+    display: none;
+  }
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: var(--primary);
+  
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.email {
+  background: grey;
+  color: white;
+}

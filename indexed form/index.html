@@ -11,12 +11,14 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
   <div class="container">
     <section class="contact-form">
+      <br>
       <form id="contact-form">
         <fieldset class="form-group border p-3">
           <legend class="w-auto">Datos Personales</legend>
@@ -55,92 +57,74 @@
             </div>
           </div>
         </fieldset>
-<hr>
+        <br>
         <fieldset class="form-group border p-3">
           <legend class="w-auto">Dirección Física</legend>
           <div id="physical_address" class="row g-3">
-          <div class="col-md-6">
-            <label for="direccionFisica1" class="form-label">Dirección</label><span class="req">*</span>
-            <input type="text" class="form-control" id="direccionFisica1" name="direccionFisica1"
-              placeholder="1234 Main St">
-          </div>
-          <div class="col-md-6">
-            <label for="direccionFisica2" class="form-label">Dirección 2</label>
-            <input type="text" class="form-control" id="direccionFisica2" name="direccionFisica2"
-              placeholder="Apartment, studio, or floor">
-          </div>
-          <div class="col-6">
-            <label for="ciudadFisica" class="form-label">Ciudad</label><span class="req">*</span>
-            <select class="form-select" id="ciudadFisica" name="ciudadFisica" required>
-              <option selected disabled value="">Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class="col-2">
-            <label for="estadoFisico" class="form-label">Estado</label><span class="req">*</span>
-            <input type="text" class="form-control" id="estadoFisico" name="estadoFisico" value="PR" required>
-          </div>
-          <div class="col-4">
-            <label for="zipcodeFisico" class="form-label">Zip code</label><span class="req">*</span>
-            <input type="text" class="form-control" id="zipcodeFisico" name="zipcodeFisico" required>
-          </div>
-          <div class="form-check mb-2">
-            <input type="checkbox" class="form-check-input" id="fisicaCorreo" name="fisicaCorreo" value="1">
-            <label class="form-check-label" for="fisicaCorreo">Mi direccion fisica es igual a mi direccion
-              postal</label>
-            </div>
-        </fieldset>
-
-          
-        <fieldset id="direccionCorreo" class="form-group border p-3">
-          <legend class="w-auto">Dirección de Correo</legend>
-          <div class="row g-3">            
             <div class="col-md-6">
-              <label for="direccionCorreo1" class="form-label">Dirección</label><span class="req">*</span>
-              <input type="text" class="form-control" id="direccionCorreo1" name="direccionCorreo1" placeholder="1234 Main St">
+              <label for="direccionFisica1" class="form-label">Dirección</label><span class="req">*</span>
+              <input type="text" class="form-control" id="direccionFisica1" name="direccionFisica1"
+                placeholder="1234 Main St">
             </div>
             <div class="col-md-6">
-              <label for="direccionCorreo2" class="form-label">Dirección 2</label>
-              <input type="text" class="form-control" id="direccionCorreo2" name="direccionCorreo2" placeholder="Apartment, studio, or floor">
+              <label for="direccionFisica2" class="form-label">Dirección 2</label>
+              <input type="text" class="form-control" id="direccionFisica2" name="direccionFisica2"
+                placeholder="Apartment, studio, or floor">
             </div>
             <div class="col-6">
-              <label for="ciudadCorreo" class="form-label">Ciudad</label><span class="req">*</span>
-              <select class="form-select" id="ciudadCorreo" name="ciudadCorreo">
+              <label for="ciudadFisica" class="form-label">Ciudad</label><span class="req">*</span>
+              <select class="form-select" id="ciudadFisica" name="ciudadFisica" required>
                 <option selected disabled value="">Choose...</option>
                 <option>...</option>
               </select>
             </div>
             <div class="col-2">
-              <label for="estadoCorreo" class="form-label">Estado</label><span class="req">*</span>
-              <input type="text" class="form-control" id="estadoCorreo" name="estadoCorreo" value="PR">
+              <label for="estadoFisico" class="form-label">Estado</label><span class="req">*</span>
+              <input type="text" class="form-control" id="estadoFisico" name="estadoFisico" value="PR" required>
             </div>
-            
             <div class="col-4">
-              <label for="physicalZipcode" class="form-label">Zip code</label><span class="req">*</span>
-              <input type="text" class="form-control" id="zipCorreo" name="zipcodeCorreo">
+              <label for="zipcodeFisico" class="form-label">Zip code</label><span class="req">*</span>
+              <input type="text" class="form-control" id="zipcodeFisico" name="zipcodeFisico" required>
             </div>
-          </div>
-        </fieldset>
-        <script>
-          $('#fisicaCorreo').change(function () {
-            if ($(this).is(":checked")) {
-              $('#direccionCorreo').addClass("d-none");
-              $('#direccionCorreo1').attr('required', false);
-              $('#ciudadCorreo').attr('required', false);
-              $('#estadoCorreo').attr('required', false);
-              $('#zipCorreo').attr('required', false);                
-            } else {
-              $('#direccionCorreo').removeClass("d-none");
-              $('#direccionCorreo1').attr('required', true);
-              $('#ciudadCorreo').attr('required', true);
-              $('#estadoCorreo').attr('required', true);
-              $('#zipCorreo').attr('required', true);
-              $('#direccionCorreo1').val() = $('#direccionFisica1').val();
-            }
-          });
+            <div class="form-check mb-2">
+              <input type="checkbox" class="form-check-input" id="fisicaCorreo" name="fisicaCorreo" value="1">
+              <label class="form-check-label" for="fisicaCorreo">Mi direccion fisica es igual a mi direccion
+                postal</label>
+            </div>
 
-        </script>
-<hr>
+            <div id="direccionCorreo" class="">
+              <legend class="w-auto">Dirección de Correo</legend>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="direccionCorreo1" class="form-label">Dirección</label><span class="req">*</span>
+                  <input type="text" class="form-control" id="direccionCorreo1" name="direccionCorreo1"
+                    placeholder="1234 Main St">
+                </div>
+                <div class="col-md-6">
+                  <label for="direccionCorreo2" class="form-label">Dirección 2</label>
+                  <input type="text" class="form-control" id="direccionCorreo2" name="direccionCorreo2"
+                    placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="col-6">
+                  <label for="ciudadCorreo" class="form-label">Ciudad</label><span class="req">*</span>
+                  <select class="form-select" id="ciudadCorreo" name="ciudadCorreo">
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="col-2">
+                  <label for="estadoCorreo" class="form-label">Estado</label><span class="req">*</span>
+                  <input type="text" class="form-control" id="estadoCorreo" name="estadoCorreo" value="PR">
+                </div>
+
+                <div class="col-4">
+                  <label for="physicalZipcode" class="form-label">Zip code</label><span class="req">*</span>
+                  <input type="text" class="form-control" id="zipCorreo" name="zipcodeCorreo">
+                </div>
+              </div>
+            </div>
+        </fieldset>
+        <br>
         <fieldset class="form-group border p-3">
           <legend class="w-auto">Información de Contacto</legend>
           <div class="row">
@@ -156,156 +140,12 @@
             </div>
             <div class="col-md-3">
               <label for="telefonoContacto" class="form-label">Teléfono</label><span class="req">*</span>
-              <input type="tel" class="form-control" pattern="^\d{10}$" id="telefonoContacto" name="telefonoContacto"  required>
+              <input type="tel" class="form-control" pattern="^\d{10}$" id="telefonoContacto" name="telefonoContacto"
+                required>
             </div>
           </div>
         </fieldset>
-<hr>
-      <fieldset class="form-group border p-3">
-        <legend class="w-auto">Elegibilidad</legend>
-        <h5>¿Es usted legalmente elegible para trabajar en EE.UU. o en Puerto Rico?</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="elegibilidad" id="elegibilidad1" value="Sí">
-          <label class="form-check-label" for="elegibilidad1"> Sí </label>
-        </div>
-        <div class="my-0 form-check">
-          <input class="form-check-input" type="radio" name="elegibilidad" id="elegibilidad2" value="No">
-          <label class="form-check-label" for="elegibilidad2"> No </label>
-        </div>
-        <hr>
-
-        <h5>¿Certifica que está disponible para trabajar todos los días y turnos, incluyendo sábado y domingo?</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="turno" id="turno1" value="Sí">
-          <label class="form-check-label" for="turno1"> Sí</label>
-        </div>
-        <div class="my-0 form-check">
-          <input class="form-check-input" type="radio" name="turno" id="turno2" value="No">
-          <label class="form-check-label" for="turno2"> No</label>
-        </div>
-      </fieldset>
-        <hr>
-        <h2>Como se entero de CTS</h2>
-        <label for="supoCTS" class="form-label">Escoja una opción</label>
-        <input class="form-control" list="datalistOptions" id="supoCTS" placeholder="Type to search..." multiple>
-        <datalist id="datalistOptions">
-          <option value="Página de internet de CTS">
-          <option value="Facebook">
-          <option value="Instagram">
-          <option value="Anuncio en Gustazos">
-          <option value="Indeed">
-        </datalist>
-<hr>
-        <h3>Idiomas que domina</h3>
-        <div class="row">
-          <div class="col-md-4">Español
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="hablaEspanol" name="hablaEspanol" value="Sí">
-              <label class="form-check-label" for="hablaEspanol">Habla</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="leeEspanol" name="leeEspanol" value="Sí">
-              <label class="form-check-label" for="leeEspanol">Lee</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="escribeEspanol" name="escribeEspanol" value="Sí">
-              <label class="form-check-label" for="escribeEspanol">Escribe</label>
-            </div>
-          </div>
-          <div class="col-md-4">Ingles
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="hablaIngles" name="hablaIngles" value="Sí">
-              <label class="form-check-label" for="hablaIngles">Habla</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="leeIngles" name="leeIngles" value="Sí">
-              <label class="form-check-label" for="leeIngles">Lee</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="escribeIngles" name="escribeIngles" value="Sí">
-              <label class="form-check-label" for="escribeIngles">Escribe</label>
-            </div>
-          </div>
-          <div class="col-md-4">Otro
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" name="hablaOtro" id="hablaOtro" value="Sí">
-              <label class="form-check-label" for="hablaOtro">Habla</label>
-            </div>
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" name="leeOtro" id="leeOtro" value="Sí">
-              <label class="form-check-label" for="leeOtro">Lee</label>
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" name="escribeOtro" id="escribeOtro" value="Sí">
-              <label class="form-check-label" for="escribeOtro">Escribe</label>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <h3>Rango Salarial por hora</h3>
-        <p>El salario mínimo en Puerto Rico es de $8.50, pero como existen ocupaciones que no están cubiertas por la ley
-          de salario mínimo (Ley 47 de 21 de septiembre de 2021), a continuación se incluyen opciones a partir de $7.25
-          por hora.</p>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="form-check">
-              <label class="form-check-label" for="salario1">$7.25 - $7.50</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario1" value="7.25-7.50" required checked>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario2">$7.51 - $7.75</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario2" value="7.51-7.75">
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario3">$7.76 - $8.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario3" value="7.76-8.00">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="form-check">
-              <label class="form-check-label" for="salario4">$8.01 - $9.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario4" value="8.01-9.00">
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario5">$9.01 - $10.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario5" value="9.01-10.00">
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario6">$10.01 - $11.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario6" value="10.01-11.00">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="form-check">
-              <label class="form-check-label" for="salario7">$11.01 - $13.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario7" value="11.01-13.00">
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario8">$13.01 - $15.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario8" value="13.01-15.00">
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario9">$15.01 - $17.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario9" value="15.01-17.00">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="form-check">
-              <label class="form-check-label" for="salario10">$17.01 - $20.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario10" value="17.01-20.00">
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario11">$20.01 - $25.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario11" value="20.01-25.00">
-            </div>
-            <div class="form-check">
-              <label class="form-check-label" for="salario12">sobre $25.00</label>
-              <input class="form-check-input" type="radio" name="salario" id="salario12" value=">25.00">
-            </div>
-          </div>
-        </div>
-        <hr>
-        <!-- <h3>Preparacion Academica</h3> -->
+        <br>
         <fieldset class="form-group border p-3">
           <legend class="w-auto">Preparacion Academica</legend>
 
@@ -333,27 +173,18 @@
                 <label class="form-check-label" for="graduado2"> No</label>
               </div>
             </div>
-
           </div>
-          <h5>Otras Cualificaciones</h5>
+          <br>
+          <legend class="w-auto">Otras Cualificaciones</legend>
           <p>Especifique destrezas o habilidades adicionales que posee y hacía uso para realizar trabajos anteriores,
             tales como: programas que domina, conocimiento técnico, capacidad de comunicar oralmente o por escrito,
             ventas, certificaciones.</p>
           <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Comments</label>
+            <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments"></textarea>
+            <label for="comments">Comments</label>
           </div>
         </fieldset>
-
-        <h3>Resumé</h3>
-        <p>Adjunte su resume actualizado. Si no lo tiene en este momento, puede continuar con el proceso de llenar la
-          solicitud. Sin embargo, en caso de que le contactemos le será solicitado para que lo envíe por correo
-          electrónico.</p>
-        <div class="input-group mb-3">
-          <input type="file" class="form-control" id="resume" name="resume">
-        </div>
-
-
+        <br>
         <fieldset class="form-group border p-3">
           <legend class="w-auto">Experiencia Laboral</legend>
           <div class="row g-3">
@@ -364,7 +195,7 @@
               <input type="text" class="form-control" id="nombrePatrono" name="nombrePatrono" required>
             </div>
             <div class="col-md-4">
-              <label for="titulo" class="form-label">Titulo del puesto</label><span class="req">*</span>
+              <label for="titulo" class="form-label">Título del puesto</label><span class="req">*</span>
               <input type="text" class="form-control" id="titulo" name="titulo" required>
             </div>
             <div class="col-md-4">
@@ -376,59 +207,230 @@
               <input type="text" class="form-control" id="telefonoPatrono" name="telefonoPatrono" required>
             </div>
             <div class="col-md-4">
-              <label for="periodo" class="form-label">Periodo</label><span class="req">*</span>
+              <label for="periodo" class="form-label">Período</label><span class="req">*</span>
               <input type="text" class="form-control" id="periodo" name="periodo" required>
             </div>
             <div class="col-md-4">
-              <label for="razonTerminacion" class="form-label">Razon de terminacion</label><span class="req">*</span>
+              <label for="razonTerminacion" class="form-label">Razón de terminación</label><span class="req">*</span>
               <input type="text" class="form-control" id="razonTerminacion" name="razonTerminacion" required>
             </div>
           </div>
         </fieldset>
-
-        <h3>Background Check</h3>
-        <h4>¿Ha sido convicto de algún delito? </h4>
-        <div class="form-check">
-          <label class="form-check-label" for="convicto1">Sí</label>
-          <input class="form-check-input" type="radio" name="convicto" id="convicto1" value="Sí" required>
-        </div>
-        <div class="my-0 form-check">
-          <label class="form-check-label" for="convicto2">No</label>
-          <input class="form-check-input" type="radio" name="convicto" id="convicto2" value="No">
-        </div>
-
-        <h3>IGUALDAD DE OPORTUNIDADES DE EMPLEO</h3>
-        <p>Como parte de nuestros procedimientos para procesar su solicitud de empleo, su información personal y
-          referencias de empleo podrían ser verificadas. Si usted hizo una falsa representación u omitió información en
-          esta solicitud y es reclutado subsiguientemente, se podría prescindir de sus servicios. No obstante, usted
-          puede solicitar por escrito la información derivada de sus referencias.
-
-          De ser necesario, para ser empleado a usted se le podrá solicitar: proveer su Certificado de Nacimiento u otra
-          prueba que valide su disponibilidad para trabajar en Estados Unidos y Puerto Rico, tomar un examen físico,
-          someterse a una prueba de dopaje, ratificar diversos acuerdos que definan los términos relacionados a las
-          condiciones de trabajo y otros.
-
-          Usted autoriza a CTS a hacer entrega a la Compañía-Cliente de: evidencia de estudios, evidencia de prueba de
-          sustancias controladas, certificado de salud, certificado de conducta, identificación con foto y número de
-          seguro social, de ser necesario, y renuncia a la confidencialidad de los mismos.</p>
-        <p>Certifico que comprendo toda la información arriba mencionada y estoy de acuerdo con la misma. Certifico que
-          toda la información provista por mí en esta solicitud es cierta y acepto que de ser falsa se podría prescindir
-          de mis servicio</p>
-        <div class="input-group mb-3">
-          <div class="input-group-text">
-            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input"
-              required>
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">Resumé</legend>
+          <p>Adjunte su resume actualizado. Si no lo tiene en este momento, puede continuar con el proceso de llenar la
+            solicitud. Sin embargo, en caso de que le contactemos le será solicitado para que lo envíe por correo
+            electrónico.</p>
+          <div class="input-group mb-3">
+            <input type="file" class="form-control" id="resume" name="resume">
           </div>
-          <!-- <input type="text" class="form-control" aria-label="Text input with checkbox"> -->
-        </div>
+        </fieldset>
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">Idiomas que domina</legend>
+          <div class="row">
+            <div class="col-md-4">Español
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hablaEspanol" name="hablaEspanol" value="Sí">
+                <label class="form-check-label" for="hablaEspanol">Habla</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="leeEspanol" name="leeEspanol" value="Sí">
+                <label class="form-check-label" for="leeEspanol">Lee</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="escribeEspanol" name="escribeEspanol" value="Sí">
+                <label class="form-check-label" for="escribeEspanol">Escribe</label>
+              </div>
+            </div>
+            <div class="col-md-4">Ingles
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hablaIngles" name="hablaIngles" value="Sí">
+                <label class="form-check-label" for="hablaIngles">Habla</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="leeIngles" name="leeIngles" value="Sí">
+                <label class="form-check-label" for="leeIngles">Lee</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="escribeIngles" name="escribeIngles" value="Sí">
+                <label class="form-check-label" for="escribeIngles">Escribe</label>
+              </div>
+            </div>
+            <div class="col-md-4">Otro
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="hablaOtro" id="hablaOtro" value="Sí">
+                <label class="form-check-label" for="hablaOtro">Habla</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="leeOtro" id="leeOtro" value="Sí">
+                <label class="form-check-label" for="leeOtro">Lee</label>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" name="escribeOtro" id="escribeOtro" value="Sí">
+                <label class="form-check-label" for="escribeOtro">Escribe</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">Rango Salarial por hora</legend>
+          <p>El salario mínimo en Puerto Rico es de $8.50, pero como existen ocupaciones que no están cubiertas por la
+            ley
+            de salario mínimo (Ley 47 de 21 de septiembre de 2021), a continuación se incluyen opciones a partir de
+            $7.25
+            por hora.</p>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-check">
+                <label class="form-check-label" for="salario1">$7.25 - $7.50</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario1" value="7.25-7.50" required>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario2">$7.51 - $7.75</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario2" value="7.51-7.75">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario3">$7.76 - $8.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario3" value="7.76-8.00">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-check">
+                <label class="form-check-label" for="salario4">$8.01 - $9.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario4" value="8.01-9.00">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario5">$9.01 - $10.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario5" value="9.01-10.00">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario6">$10.01 - $11.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario6" value="10.01-11.00">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-check">
+                <label class="form-check-label" for="salario7">$11.01 - $13.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario7" value="11.01-13.00">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario8">$13.01 - $15.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario8" value="13.01-15.00">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario9">$15.01 - $17.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario9" value="15.01-17.00">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-check">
+                <label class="form-check-label" for="salario10">$17.01 - $20.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario10" value="17.01-20.00">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario11">$20.01 - $25.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario11" value="20.01-25.00">
+              </div>
+              <div class="form-check">
+                <label class="form-check-label" for="salario12">sobre $25.00</label>
+                <input class="form-check-input" type="radio" name="salario" id="salario12" value=">25.00">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">Elegibilidad</legend>
+          <h5>¿Es usted legalmente elegible para trabajar en EE.UU. o en Puerto Rico?</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="elegibilidad" id="elegibilidad1" value="Sí">
+            <label class="form-check-label" for="elegibilidad1"> Sí </label>
+          </div>
+          <div class="my-0 form-check">
+            <input class="form-check-input" type="radio" name="elegibilidad" id="elegibilidad2" value="No">
+            <label class="form-check-label" for="elegibilidad2"> No </label>
+          </div>
+          <hr>
+          <h5>¿Certifica que está disponible para trabajar todos los días y turnos, incluyendo sábados y domingos?</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="turno" id="turno1" value="Sí">
+            <label class="form-check-label" for="turno1"> Sí</label>
+          </div>
+          <div class="my-0 form-check">
+            <input class="form-check-input" type="radio" name="turno" id="turno2" value="No">
+            <label class="form-check-label" for="turno2"> No</label>
+          </div>
+        </fieldset>
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">¿Cómo se enetero de CTS?</legend>
+          <h2></h2>
+          <label for="supoCTS" class="form-label">Escoja una opción:</label>
+          <input class="form-control" list="datalistOptions" id="supoCTS" placeholder="Type to search..." multiple>
+          <datalist id="datalistOptions">
+            <option value="Página de internet de CTS">
+            <option value="Facebook">
+            <option value="Instagram">
+            <option value="Anuncio en Gustazos">
+            <option value="Indeed">
+          </datalist>
+        </fieldset>      
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">Background Check</legend>
+          <h5>¿Ha sido convicto de algún delito? </h5>
+          <div class="form-check">
+            <label class="form-check-label" for="convicto1">Sí</label>
+            <input class="form-check-input" type="radio" name="convicto" id="convicto1" value="Sí" required>
+          </div>
+          <div class="my-0 form-check">
+            <label class="form-check-label" for="convicto2">No</label>
+            <input class="form-check-input" type="radio" name="convicto" id="convicto2" value="No">
+          </div>
+        </fieldset>
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">IGUALDAD DE OPORTUNIDADES DE EMPLEO</legend>
+          <p>Como parte de nuestros procedimientos para procesar su solicitud de empleo, su información personal y
+            referencias de empleo podrían ser verificadas. Si usted hizo una falsa representación u omitió información
+            en
+            esta solicitud y es reclutado subsiguientemente, se podría prescindir de sus servicios. No obstante, usted
+            puede solicitar por escrito la información derivada de sus referencias.
 
+            De ser necesario, para ser empleado a usted se le podrá solicitar: proveer su Certificado de Nacimiento u
+            otra
+            prueba que valide su disponibilidad para trabajar en Estados Unidos y Puerto Rico, tomar un examen físico,
+            someterse a una prueba de dopaje, ratificar diversos acuerdos que definan los términos relacionados a las
+            condiciones de trabajo y otros.
+
+            Usted autoriza a CTS a hacer entrega a la Compañía-Cliente de: evidencia de estudios, evidencia de prueba de
+            sustancias controladas, certificado de salud, certificado de conducta, identificación con foto y número de
+            seguro social, de ser necesario, y renuncia a la confidencialidad de los mismos.</p>
+          <p>Certifico que comprendo toda la información arriba mencionada y estoy de acuerdo con la misma. Certifico
+            que
+            toda la información provista por mí en esta solicitud es cierta y acepto que de ser falsa se podría
+            prescindir
+            de mis servicio</p>
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="checkbox" value=""
+                aria-label="Checkbox for following text input" required>
+            </div>
+            <!-- <input type="text" class="form-control" aria-label="Text input with checkbox"> -->
+          </div>
+        </fieldset>
+        <br>
         <button type="submit" class="btn btn-primary">Submit</button>
         <input type="text" name="id" value="1" hidden>
       </form>
+      <br>
 
   </div>
   </section>
-  
+
 </body>
 
 </html>

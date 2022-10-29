@@ -1,0 +1,17 @@
+:root {
+  --primary: #ed1c8f; /*Deep Cerise rgba(237, 28, 143, 1)*/
+  --suplementario: #1D8FED; /*Bleu De France*/
+  --secondary: #3371DF; /* rgba(51, 113, 223, 1)*/
+}
+
+#contact-form legend {
+  color: var(--primary);
+}
+
+#contact-form label { 
+  color: var(--secondary);
+}
+
+fieldset {
+  /* background:#e0e0e0; */
+}

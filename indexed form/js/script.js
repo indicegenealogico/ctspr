@@ -65,28 +65,102 @@ request.onsuccess = function(e) {
         document.getElementById('estadoFisico').value       = user.estadoFisico;
         document.getElementById('zipcodeFisico').value      = user.zipcodeFisico;
 
-        document.getElementById('fisicaCorreo').value       = user.fisicaCorreo;
-        
-        //Direccion de Correo
-        document.getElementById('direccionCorreo1').value   = user.direccionCorreo1;
-        document.getElementById('direccionCorreo2').value   = user.direccionCorreo2;
-        document.getElementById('estadoCorreo').value       = user.estadoCorreo;
-        document.getElementById('zipcodeCorreo').value      = user.zipcodeCorreo;
-        
+        if (user.fisicaCorreo > 0) {
+          $('#direccionCorreo').addClass("d-none");
+        }
+        else {
+          document.getElementById('fisicaCorreo').checked = false;
+          $('#direccionCorreo').removeClass("d-none");
+        }
+
+        $('#fisicaCorreo').change(function () {
+          if ($(this).is(":checked")) {
+            $('#direccionCorreo').addClass("d-none");
+            $('#direccionCorreo1').attr('required', false);
+            $('#ciudadCorreo').attr('required', false);
+            $('#estadoCorreo').attr('required', false);
+            $('#zipCorreo').attr('required', false);                
+          } else {
+            $('#direccionCorreo').removeClass("d-none");
+            $('#direccionCorreo1').attr('required', true);
+            $('#ciudadCorreo').attr('required', true);
+            $('#estadoCorreo').attr('required', true);
+            $('#zipCorreo').attr('required', true);
+            $('#direccionCorreo1').val() = $('#direccionFisica1').val();
+
+            //Direccion de Correo
+            document.getElementById('direccionCorreo1').value = user.direccionCorreo1;
+            document.getElementById('direccionCorreo2').value = user.direccionCorreo2;
+            document.getElementById('estadoCorreo').value     = user.estadoCorreo;
+            document.getElementById('zipcodeCorreo').value    = user.zipcodeCorreo;
+          }
+        });
+                        
         //Informacion de Contacto
         document.getElementById('contactoEmergencia').value = user.contactoEmergencia;
         document.getElementById('parentesco').value         = user.parentesco;
-        //document.getElementById('telefonoContacto').value   = user.telefonoContacto;
+        document.getElementById('telefonoContacto').value   = user.telefonoContacto;
 
+        //Elegibilidad
+        if (user.elegibilidad == "Sí") {$('#elegibilidad1').attr('checked', true);}
+        else { $('#elegibilidad2').attr('checked', true)}
 
+        //Turno
+        if (user.turno == "Sí") {$('#turno1').attr('checked', true);}
+        else { $('#turno2').attr('checked', true)}
 
-        document.getElementById('telefonoPatrono').value    = user.telefonoPatrono;
-        //document.getElementById('xx').value = user.xx;
+        //Experiencia Laboral
+        document.getElementById('nombrePatrono').value    = user.nombrePatrono;
+        document.getElementById('titulo').value           = user.titulo;
+        document.getElementById('nombreSupervisor').value = user.nombreSupervisor;
+        document.getElementById('telefonoPatrono').value  = user.telefonoPatrono;
+        document.getElementById('periodo').value          = user.periodo;
+        document.getElementById('razonTerminacion').value = user.razonTerminacion;
+
+        //Prparacion Academica
+        document.getElementById('school').value          = user.school;
+        document.getElementById('periodoEstudios').value = user.periodoEstudios;
+        document.getElementById('grado').value           = user.grado;
+        if (user.graduado == "Sí") {$('#graduado1').attr('checked', true);}
+        else { $('#graduado2').attr('checked', true)}
         
+        //Background Check
+        if (user.convicto == "Sí") {$('#convicto1').attr('checked', true);}
+        else { $('#convicto2').attr('checked', true)}
+
+        //Salario
+        const salarioButtons = document.querySelectorAll('input[name="salario"]');
+        for (const salary of salarioButtons) {
+          if (salary.value == user.salario) {
+            document.getElementById(salary.id).checked = true;
+            break;
+          }
+        }
+
+        // document.getElementById('xx').value = user.xx;
+
         console.table(user);
         console.log(user.nombre);        
       }
     } else { // key not exist
+      // $('#direccionCorreo').addClass("d-none");
+      $('#fisicaCorreo').change(function () {
+        if ($(this).is(":checked")) {
+          $('#direccionCorreo').addClass("d-none");
+          $('#direccionCorreo1').attr('required', false);
+          $('#ciudadCorreo').attr('required', false);
+          $('#estadoCorreo').attr('required', false);
+          $('#zipCorreo').attr('required', false);                
+        } else {
+          $('#direccionCorreo').removeClass("d-none");
+          $('#direccionCorreo1').attr('required', true);
+          $('#ciudadCorreo').attr('required', true);
+          $('#estadoCorreo').attr('required', true);
+          $('#zipCorreo').attr('required', true);
+          $('#direccionCorreo1').val() = $('#direccionFisica1').val();
+
+        }
+      });
       console.log('Formulario vacio');
     }
   };
@@ -107,11 +181,6 @@ function handleFormSubmit(e) {
 
   insertCandidate(db, formJSON);
 
-  // for multi-selects, we need special handling
-  //formJSON.snacks = data.getAll('snacks');
-  
-  // const results = document.querySelector('.results pre');
-  // results.innerText = JSON.stringify(formJSON, null, 2);
 
 
 function insertCandidate(db, table) {
