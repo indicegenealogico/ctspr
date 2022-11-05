@@ -158,11 +158,35 @@ request.onsuccess = function(e) {
           $('#estadoCorreo').attr('required', true);
           $('#zipCorreo').attr('required', true);
           $('#direccionCorreo1').val() = $('#direccionFisica1').val();
-
         }
       });
       console.log('Formulario vacio');
     }
+
+    // Disponibilidad de turno
+    $('#turno1').change(function () {
+      if ($(this).is(":checked")) {
+        $('#disponibilidad').addClass("d-none", 3000, "easeInBack");            
+      }
+    });
+    $('#turno2').change(function () {
+      if ($(this).is(":checked")) {
+        $('#disponibilidad').removeClass("d-none", 3000, "easeInBack");               
+      }
+    });
+    
+
+    // Backgroung check
+    $('#convicto1').change(function () {
+      if ($(this).is(":checked")) {
+        $('#detallesConvicto').removeClass("d-none");            
+      }
+    });
+    $('#convicto2').change(function () {
+      if ($(this).is(":checked")) {
+        $('#detallesConvicto').addClass("d-none");            
+      }
+    });
   };
 
   form.addEventListener('submit', handleFormSubmit);

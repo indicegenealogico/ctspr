@@ -93,6 +93,7 @@
             </div>
 
             <div id="direccionCorreo" class="">
+              <hr>
               <legend class="w-auto">Dirección de Correo</legend>
               <div class="row g-3">
                 <div class="col-md-6">
@@ -352,8 +353,11 @@
           <div class="my-0 form-check">
             <input class="form-check-input" type="radio" name="elegibilidad" id="elegibilidad2" value="No">
             <label class="form-check-label" for="elegibilidad2"> No </label>
-          </div>
-          <hr>
+          </div>          
+        </fieldset>
+        <br>
+        <fieldset class="form-group border p-3">
+          <legend class="w-auto">Disponibilidad</legend>
           <h5>¿Certifica que está disponible para trabajar todos los días y turnos, incluyendo sábados y domingos?</h5>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="turno" id="turno1" value="Sí">
@@ -361,8 +365,41 @@
           </div>
           <div class="my-0 form-check">
             <input class="form-check-input" type="radio" name="turno" id="turno2" value="No">
-            <label class="form-check-label" for="turno2"> No</label>
+            <label class="form-check-label" for="turno2"> No (ver opciones de turno)</label>
           </div>
+          <div id="disponibilidad" class="d-none">
+            <hr>
+            <legend class="w-auto">Por favor, indique su disponibilidad de turno</legend>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="turnoA" name="turnoA" value="Día tiempo completo (L-V)">
+                <label class="form-check-label" for="turnoA">Día tiempo completo (L-V)</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="turnoB" name="turnoB" value="Día tiempo parcial (L-V)">
+                <label class="form-check-label" for="turnoB">Día tiempo parcial (L-V)</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="turnoC" name="turnoC" value="Noche tiempo completo (L-V)">
+                <label class="form-check-label" for="turnoC">Noche tiempo completo (L-V)</label>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="turnoD" name="turnoD" value="Noche tiempo parcial (L-V)">
+                <label class="form-check-label" for="turnoD">Noche tiempo parcial (L-V)</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="turnoE" name="turnoE" value="Turno rotativo completo">
+                <label class="form-check-label" for="turnoE">Turno rotativo completo</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="turnoF" name="turnoF" value="Turno rotativo parcial">
+                <label class="form-check-label" for="turnoF">Turno rotativo parcial</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="turnoG" id="turnoG" value="Solo fines de semana (S-D)">
+                <label class="form-check-label" for="turnoG">Solo fines de semana (S-D)</label>
+              </div>
+            </div>
         </fieldset>
         <br>
         <fieldset class="form-group border p-3">
@@ -386,10 +423,19 @@
             <label class="form-check-label" for="convicto1">Sí</label>
             <input class="form-check-input" type="radio" name="convicto" id="convicto1" value="Sí" required>
           </div>
+          <div id="detallesConvicto" class="form-floating d-none">
+            <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments" required></textarea>
+            <label for="comments">Provea detalles aquí *</label>
+          </div>
           <div class="my-0 form-check">
             <label class="form-check-label" for="convicto2">No</label>
             <input class="form-check-input" type="radio" name="convicto" id="convicto2" value="No">
           </div>
+          
+
+
+
+
         </fieldset>
         <br>
         <fieldset class="form-group border p-3">
@@ -416,8 +462,16 @@
             de mis servicio</p>
           <div class="input-group mb-3">
             <div class="input-group-text">
-              <input class="form-check-input mt-0" type="checkbox" value=""
+              <input class="form-check-input mt-0" type="radio" name="certificacion" value="Acepto"
                 aria-label="Checkbox for following text input" required>
+              <label class="form-check-label" for="certificacion"> Acepto</label>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-text">
+              <input class="form-check-input mt-0" type="radio" name="certificacion" value="NoAcepto"
+                aria-label="Checkbox for following text input" required>
+              <label class="form-check-label" for="certificacion"> No Acepto</label>
             </div>
             <!-- <input type="text" class="form-control" aria-label="Text input with checkbox"> -->
           </div>
