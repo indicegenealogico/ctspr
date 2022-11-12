@@ -45,7 +45,7 @@
         headerSortTristate:true,
         headerSortClickElement:"icon",
         columns:[
-          { title:"Sec",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55},
+          { title:"",formatter:"rownum", headerSort:false, hozAlign:"center", maxWidth:55},
           {title:"Posición", field:"title", headerFilterPlaceholder:"Filtrar...", headerFilter:"input", headerFilterParams:{valuesLookup:true, clearable:true},
             cellClick:function(e, cell){window.open({% url 'login' %}, 'Algo', 'popup')}
           },

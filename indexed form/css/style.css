@@ -22,3 +22,10 @@
 #igualdad label.form-check-label {
   margin-left: 8px;
 }
+
+.card-iqual-text-size {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
