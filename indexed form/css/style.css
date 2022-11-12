@@ -19,3 +19,6 @@
 .req {
   color: var(--primary);
 }
+#igualdad label.form-check-label {
+  margin-left: 8px;
+}

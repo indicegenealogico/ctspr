@@ -174,6 +174,21 @@ request.onsuccess = function(e) {
         $('#disponibilidad').removeClass("d-none", 3000, "easeInBack");               
       }
     });
+
+    // Elegibilidad
+    $('#elegibilidad2').click(function () {
+      if ($(this).is(":checked")) {
+        $('#enviarData').attr('disabled','disabled');
+        $('#resto').addClass("d-none"); 
+      }
+    });
+    $('#elegibilidad1').click(function () {
+      if ($(this).is(":checked")) {
+        $('#enviarData').removeAttr('disabled');          
+        $('#resto').removeClass("d-none");            
+      }
+    });
+
     
 
     // Backgroung check
